@@ -1,57 +1,22 @@
-# Project Name
+# Vector Database Options in Azure
 
-(short, 1-3 sentenced, description of the project)
-
-## Features
-
-This project framework provides the following features:
-
-* Feature 1
-* Feature 2
-* ...
-
-## Getting Started
-
-### Prerequisites
-
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [repository name]
-3. ...
+Vector database is a key component for building LLM applications. Here is a list of key points to consider while using a vector database.
 
 
-## Demo
+## Key Considerations
 
-A demo app is included to show how to use the project.
+### Index Algorithm
 
-To run the demo, follow these steps:
+### Similarity / Distance Metric
 
-(Add steps to start up the demo)
+### Multi Index vs Single Index
 
-1.
-2.
-3.
+### Incremental Load
 
-## Resources
+### Metadata Filtering / Hybrid Query
 
-(Any additional resources or related projects)
+## Sample Code
 
-- Link to supporting information
-- Link to similar sample
-- ...
+- [Azure Cognitive Search](azure_cognitive_search/)
+- [Azure Redis Cache](azure_redis_cache/)
+- [Azure PostgreSQL](azure-postgresql/)

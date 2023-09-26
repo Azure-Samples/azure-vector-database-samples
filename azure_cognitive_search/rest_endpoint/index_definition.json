@@ -1,0 +1,67 @@
+{
+    "name": "product_docs",
+    "fields": [
+        {
+            "name": "id",
+            "type": "Edm.String",
+            "key": true
+        },
+        {
+            "name": "title",
+            "type": "Edm.String"
+        },
+        {
+            "name": "content",
+            "type": "Edm.String",
+            "searchable": true
+        },
+        {
+            "name": "category",
+            "type": "Edm.String",
+            "searchable": true
+        },
+        {
+            "name": "title_vector",
+            "type": "Collection(Edm.Single)",
+            "searchable": true,
+            "dimensions": 1536,
+            "vectorSearchConfiguration": "vector_config"
+        },
+        {
+            "name": "content_vector",
+            "type": "Collection(Edm.Single)",
+            "searchable": true,
+            "dimensions": 1536,
+            "vectorSearchConfiguration": "vector_config"
+        }
+    ],
+    "corsOptions": {
+        "allowedOrigins": ["*"],
+        "maxAgeInSeconds": 60
+    },
+    "scoringProfiles": [
+        {
+            "name": "scoring_profile_1",
+            "text": {
+                "weights": {
+                    "title": 10,
+                    "content": 2
+                }
+            }
+        }
+    ],
+    "vectorSearch": {
+        "algorithmConfigurations": [
+            {
+                "name": "vector_config",
+                "kind": "hnsw",
+                "hnswParameters": {
+                    "m": 4,
+                    "efConstruction": 400,
+                    "efSearch": 500,
+                    "metric": "cosine"
+                }
+            }
+        ]
+    }
+}
