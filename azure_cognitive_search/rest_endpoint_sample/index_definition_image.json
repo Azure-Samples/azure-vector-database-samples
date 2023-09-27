@@ -1,0 +1,39 @@
+{
+    "name": "image_sample",
+    "fields": [
+        {
+            "name": "id",
+            "type": "Edm.String",
+            "key": true
+        },
+        {
+            "name": "image",
+            "type": "Edm.String"
+        },
+        {
+            "name": "image_vector",
+            "type": "Collection(Edm.Single)",
+            "searchable": true,
+            "dimensions": 1024,
+            "vectorSearchConfiguration": "vector_config"
+        }
+    ],
+    "corsOptions": {
+        "allowedOrigins": ["*"],
+        "maxAgeInSeconds": 60
+    },
+    "vectorSearch": {
+        "algorithmConfigurations": [
+            {
+                "name": "vector_config",
+                "kind": "hnsw",
+                "hnswParameters": {
+                    "m": 4,
+                    "efConstruction": 400,
+                    "efSearch": 500,
+                    "metric": "cosine"
+                }
+            }
+        ]
+    }
+}
