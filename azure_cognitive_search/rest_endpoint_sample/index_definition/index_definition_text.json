@@ -1,5 +1,5 @@
 {
-    "name": "handbook",
+    "name": "text_sample",
     "fields": [
         {
             "name": "id",
@@ -7,11 +7,28 @@
             "key": true
         },
         {
-            "name": "chunk_content",
+            "name": "title",
             "type": "Edm.String"
         },
         {
-            "name": "chunk_content_vector",
+            "name": "content",
+            "type": "Edm.String",
+            "searchable": true
+        },
+        {
+            "name": "category",
+            "type": "Edm.String",
+            "searchable": true
+        },
+        {
+            "name": "title_vector",
+            "type": "Collection(Edm.Single)",
+            "searchable": true,
+            "dimensions": 1536,
+            "vectorSearchConfiguration": "vector_config"
+        },
+        {
+            "name": "content_vector",
             "type": "Collection(Edm.Single)",
             "searchable": true,
             "dimensions": 1536,
@@ -22,6 +39,17 @@
         "allowedOrigins": ["*"],
         "maxAgeInSeconds": 60
     },
+    "scoringProfiles": [
+        {
+            "name": "scoring_profile_1",
+            "text": {
+                "weights": {
+                    "title": 10,
+                    "content": 2
+                }
+            }
+        }
+    ],
     "vectorSearch": {
         "algorithmConfigurations": [
             {
