@@ -109,6 +109,13 @@ This script uses the: text-embedding-ada-002 and you will need to  create it at 
 
 
 
+
+Example:
+
+```
+setx AZURE_OPENAI_EMBEDDING_DEPLOYMENT "text-embedding-ada-002"
+```
+
 Please look at the docs for more details about this scenario:
 
 [Azure OpenAI Service embeddings tutorial - Azure OpenAI | Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/openai/tutorials/embeddings?tabs=command-line)https://github.com/Azure/cognitive-search-vector-pr/tree/main/demo-python/data)
