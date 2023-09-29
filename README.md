@@ -5,9 +5,9 @@ As the need for customers to build copilots over their data grows, Vector Databa
 The samples focus on -
 
 - Working with text, documents and images
-- IAC approach to spin up vector storage
+- IAC code to spin up vector storage in Azure
 - Ingesting embeddings and constructing complex queries
-- Common scaling and troubleshooting
+- Common scaling and troubleshooting challenges
 
 ***What this repository is not*** - This repository doesn't offer any guidance on how to build LLM apps (for example RAG pattern).
 

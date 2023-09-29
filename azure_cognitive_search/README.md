@@ -18,10 +18,11 @@ This folder includes the notebooks to demonstrate vector search capabilities for
   - Azure Cognitive Search
   - Azure OpenAI
   - Azure Computer Vision
-- Create a conda environment to include all the python dependencies.
+- Create a conda environment to include all necessary python dependencies.
   - For REST endpoint samples - [cognitive_search_rest_conda.yml](./rest_endpoint_sample/cognitive_search_rest_conda.yml)
   - For Python SDK samples - [cognitive_search_sdk_conda.yml](./python_sdk_sample/cognitive_search_sdk_conda.yml)
 - Create a *.env* file from the *.env-template* and populate it with all necessary keys.
+- Run the [common > generate_embeddings.ipynb](../common/generate_embeddings.ipynb) notebook to generate the embeddings from the source dataset before running the samples.
 
 ## Datasets
 
