@@ -16,3 +16,7 @@ The samples focus on -
 - [Azure Cognitive Search](./azure_cognitive_search/README.md)
 - [Azure Redis Cache](azure_redis_cache/)
 - [Azure PostgreSQL](azure-postgresql/)
+
+## Run the Code Locally
+
+To run the code locally, install the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) in Visual Studio Code.

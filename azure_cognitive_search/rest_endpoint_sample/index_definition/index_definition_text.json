@@ -18,6 +18,7 @@
         {
             "name": "category",
             "type": "Edm.String",
+            "filterable": true,
             "searchable": true
         },
         {
