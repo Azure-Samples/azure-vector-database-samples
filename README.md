@@ -15,7 +15,7 @@ The samples focus on -
 
 - [Azure Cognitive Search](./azure_cognitive_search/README.md)
 - [Azure Redis Cache](azure_redis_cache/)
-- [Azure PostgreSQL](azure-postgresql/)
+- [Azure PostgreSQL](azure-postgresql/README.md)
 
 ## Run the Code Locally
 
