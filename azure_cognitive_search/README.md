@@ -1,6 +1,19 @@
 # Azure Cognitive Search
 
-This folder includes the notebooks to demonstrate vector search capabilities for text, documents and images using Azure Cognitive Search. There are two ways to use Azure Cognitive Search, REST API and Python SDK.
+This folder includes the notebooks to demonstrate vector search capabilities for text, documents and images using Azure Cognitive Search. There are two ways to use Azure Cognitive Search - REST API or Python SDK.
+
+- Infrastructure
+  - [azure_cognitive_search.bicep](./infrastructure/azure_cognitive_search.bicep)
+
+- REST Endpoint
+  - [cognitive_search_rest_text.ipynb](./rest_endpoint_sample/cognitive_search_rest_text.ipynb)
+  - [cognitive_search_rest_doc.ipynb](./rest_endpoint_sample/cognitive_search_rest_doc.ipynb)
+  - [cognitive_search_rest_image.ipynb](./rest_endpoint_sample/cognitive_search_rest_image.ipynb)
+
+- Python SDK
+  - [cognitive_search_sdk_text.ipynb](./rest_endpoint_sample/cognitive_search_sdk_text.ipynb)
+  - [cognitive_search_sdk_doc.ipynb](./rest_endpoint_sample/cognitive_search_sdk_doc.ipynb)
+  - [cognitive_search_sdk_image.ipynb](./rest_endpoint_sample/cognitive_search_sdk_image.ipynb)
 
 ## Prerequisites
 
