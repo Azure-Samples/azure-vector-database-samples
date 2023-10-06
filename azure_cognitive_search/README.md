@@ -2,7 +2,10 @@
 
 This folder includes the notebooks to demonstrate vector search capabilities for text, documents and images using Azure Cognitive Search. There are two ways to use Azure Cognitive Search - REST API or Python SDK.
 
-## Resources Deployment Instructions
+## Resources Deployment
+
+For IAC scripts to deploy Azure resources, please check this repository - [Virtual Network Integration Recipes
+](https://github.com/Azure-Samples/virtual-network-integration-recipes)
 
 - Azure Cognitive Search
 
