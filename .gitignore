@@ -58,3 +58,4 @@ build/
 
 **/.env
 .env
+.venv/*
