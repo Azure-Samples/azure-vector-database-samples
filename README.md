@@ -21,5 +21,7 @@ The samples focus on -
 
 ## Run the Code Locally
 
-To run the code locally, install the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) in Visual Studio Code. Please check [Jupyter Notebooks in VS Code
+- To run the code locally, install the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) in Visual Studio Code. Please check [Jupyter Notebooks in VS Code
 ](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) to understand how to use this extension.
+
+- The samples uses conda to manage python dependencies. Please check [Python environments in VS Code](https://code.visualstudio.com/docs/python/environments) how to use conda with VS Code.
