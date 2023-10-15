@@ -30,3 +30,7 @@ For IAC scripts to deploy Azure resources, please check this repository - [Virtu
 
 - [postgresql_ingestion.ipynb](./postgresql_ingestion.ipynb)
 - [postgresql_vector_query.ipynb](./postgresql_vector_query.ipynb)
+
+## Reference
+
+- [pgvector github repository](https://github.com/pgvector/pgvector)
