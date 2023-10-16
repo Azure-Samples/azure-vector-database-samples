@@ -42,7 +42,7 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2019-11-01' = {
       }
     ]
   }
-  resource appServiceIntegrationSubnet 'subnets' existing = {
+  resource postgresSubnet 'subnets' existing = {
     name: subnetPostgresName
   }
 }
@@ -67,4 +67,4 @@ output privateDnsZoneArmResourceId string = privateDnsZones.id
 
 output virtualNetworkName string = virtualNetwork.name
 output virtualNetworkId string = virtualNetwork.id
-output subnetAppServiceIntId string = virtualNetwork::appServiceIntegrationSubnet.id
+output subnetPostgresId string = virtualNetwork::postgresSubnet.id

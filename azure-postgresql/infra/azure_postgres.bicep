@@ -45,7 +45,7 @@ resource dbServer 'Microsoft.DBforPostgreSQL/flexibleServers@2021-06-01' = {
       geoRedundantBackup: 'Disabled'
     }
     network: {
-      delegatedSubnetResourceId: network.outputs.subnetAppServiceIntId
+      delegatedSubnetResourceId: network.outputs.subnetPostgresId
       privateDnsZoneArmResourceId: network.outputs.privateDnsZoneArmResourceId
     }
   }
