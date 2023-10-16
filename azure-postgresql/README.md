@@ -4,14 +4,21 @@ This folder includes the notebooks to demonstrate vector search capabilities for
 
 ## Resources Deployment
 
-For IAC scripts to deploy Azure resources, please check this repository - [Virtual Network Integration Recipes
-](https://github.com/Azure-Samples/virtual-network-integration-recipes)
+For IAC scripts to deploy Azure resources, please check **[infra folder](./infra/)**. The script will deploy Azure Database for PostgreSQL flexible server.
+
+To deploy the infra resources, follow below steps-
+
+1) Navigate to **[infra folder](./infra/)**
+2) Fill out the parameters values in `params` section according to your environment.
+3) To deploy, run the following command- `az deployment group create --resource-group resource_group_name --template-file postgres.bicep`
 
 - Azure OpenAI
   
   Azure OpenAI Service resource can be deployed using [Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal), [Azure CLI](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=cli) or [Azure PowerShell](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=ps). Again, [private endpoints](https://learn.microsoft.com/azure/ai-services/cognitive-services-virtual-networks?context=%2Fazure%2Fai-services%2Fopenai%2Fcontext%2Fcontext&tabs=portal#use-private-endpoints) can be used for Azure AI services resources to allow clients on a virtual network to securely access data over Azure Private Link.
-- Azure Computer Vision
-- Azure Database for PostgreSQL flexible server
+
+  NOTE: For using Azure Postgres as Vector DB, you need to enable the Vector option in Postgres config.
+  
+  You can enable this option via- **Navigate to `Server Parameters`, under `azure.extensions` and select the `Vector` parameter.**
 
 ## Prerequisites
 
