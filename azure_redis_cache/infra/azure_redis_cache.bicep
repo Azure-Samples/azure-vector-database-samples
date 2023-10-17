@@ -2,6 +2,7 @@ param location string = resourceGroup().location
 param redisCacheName string = ''
 param redisPrivateEndpointName string = ''
 param privateLinkServiceConnectionName string = ''
+param redisCacheSKU string = 'Enterprise_E10'
 
 
 module network 'vnet.bicep' = {
@@ -16,7 +17,7 @@ resource redisEnterprise 'Microsoft.Cache/redisEnterprise@2022-01-01' = {
   name: redisCacheName
   location: location
   sku: {
-    name: 'Enterprise_E10'
+    name: redisCacheSKU
     capacity: 2
   }
 }
