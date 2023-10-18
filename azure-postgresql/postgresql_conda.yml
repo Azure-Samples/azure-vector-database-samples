@@ -156,3 +156,4 @@ dependencies:
   - zstd=1.5.5=h12be248_0
   - pip:
       - psycopg2==2.9.9
+prefix: C:\Users\raihanalam\Miniconda3\envs\postgresql
