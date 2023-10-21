@@ -11,7 +11,9 @@ This folder includes the notebooks to demonstrate vector search capabilities for
   To deploy the Azure Database for PostgreSQL via IAC script -  
   1) Navigate to **[infrastructure](./infrastructure/)** folder
   2) Fill out the parameters values in `params` section according to your environment
-  3) To deploy, run the following command- `az deployment group create --resource-group resource_group_name --template-file postgres.bicep`
+  3) Run the following command -
+  
+    `az deployment group create --resource-group resource_group_name --template-file postgres.bicep`
 
 - Azure OpenAI
   
