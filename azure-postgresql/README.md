@@ -7,6 +7,9 @@ This folder includes the notebooks to demonstrate vector search capabilities for
 For IAC scripts to deploy Azure resources, please check this repository - [Virtual Network Integration Recipes
 ](https://github.com/Azure-Samples/virtual-network-integration-recipes)
 
+- Azure Database for PostgreSQL
+  - Flexible Server
+  - Activate vector extension
 - Azure OpenAI
   
   Azure OpenAI Service resource can be deployed using [Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal), [Azure CLI](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=cli) or [Azure PowerShell](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=ps). Again, [private endpoints](https://learn.microsoft.com/azure/ai-services/cognitive-services-virtual-networks?context=%2Fazure%2Fai-services%2Fopenai%2Fcontext%2Fcontext&tabs=portal#use-private-endpoints) can be used for Azure AI services resources to allow clients on a virtual network to securely access data over Azure Private Link.
