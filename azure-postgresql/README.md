@@ -6,14 +6,19 @@ This folder includes the notebooks to demonstrate vector search capabilities for
 
 - Azure Database for PostgreSQL
 
-  Vector search in PostgreSQL is supported via the [pgvector](https://github.com/pgvector/pgvector) extension. To enable this extension via Azure Portal, navigate to `Server Parameters`, under `azure.extensions` and select the `VECTOR` parameter.
+  *Create resource*
 
-  To deploy the Azure Database for PostgreSQL via IAC script -  
-  1) Navigate to **[infrastructure](./infrastructure/)** folder
-  2) Fill out the parameters values in `params` section according to your environment
-  3) Run the following command -
+    Vector search feature can only be used with Flexible Server. PostgreSQL Flexible Server can  be deployed from the Azure Portal.
+
+    For IAC deployment, **[infrastructure](./infrastructure/)** folder has a bicep script to deploy the PostgreSQL Flexible Server. In the bicep script, fill out the parameters values in `params` section according to your environment, and run the following command.
+
+   `az deployment group create --resource-group resource_group_name --template-file postgres.bicep`
   
-    `az deployment group create --resource-group resource_group_name --template-file postgres.bicep`
+  *Enable extension*
+
+    Vector search in PostgreSQL is supported via the [pgvector](https://github.com/pgvector/pgvector) extension. To add it to allowlist via Azure Portal, navigate to `Server Parameters`, under `azure.extensions` and select the `VECTOR` parameter. 
+    
+     Extension details - [how to use PostgreSQL extensions](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-extensions#how-to-use-postgresql-extensions). Check if it's correctly added by running `SHOW azure.extensions;`.
 
 - Azure OpenAI
   
