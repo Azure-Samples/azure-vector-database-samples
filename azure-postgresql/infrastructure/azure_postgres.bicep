@@ -13,7 +13,7 @@ module network 'vnet.bicep' = {
   name: 'vnet'
   params: {
     location: location
-    privateDnsZoneName: '${serverName}.private.postgres.database.azure.com'
+    privateDnsZoneName: '${serverName}.postgres.database.azure.com'
   }
 }
 
