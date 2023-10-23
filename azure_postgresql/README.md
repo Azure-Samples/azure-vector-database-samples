@@ -4,17 +4,21 @@ This folder includes the notebooks to demonstrate vector search capabilities for
 
 ## Resources Deployment
 
-For IAC scripts to deploy Azure resources, please check this repository - [Virtual Network Integration Recipes
-](https://github.com/Azure-Samples/virtual-network-integration-recipes)
-
 - Azure Database for PostgreSQL
-  - Flexible Server
-  - Activate vector extension
+
+  *Create resource*
+
+    Vector search feature can only be used with Flexible Server. PostgreSQL Flexible Server can  be deployed from the Azure Portal.
+  
+  *Enable extension*
+
+    Vector search in PostgreSQL is supported via the [pgvector](https://github.com/pgvector/pgvector) extension. To add it to allowlist via Azure Portal, navigate to `Server Parameters`, under `azure.extensions` and select the `VECTOR` parameter. 
+    
+     Extension details - [how to use PostgreSQL extensions](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-extensions#how-to-use-postgresql-extensions). Check if it's correctly added by running `SHOW azure.extensions;`.
+
 - Azure OpenAI
   
   Azure OpenAI Service resource can be deployed using [Azure Portal](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=web-portal), [Azure CLI](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=cli) or [Azure PowerShell](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource?pivots=ps). Again, [private endpoints](https://learn.microsoft.com/azure/ai-services/cognitive-services-virtual-networks?context=%2Fazure%2Fai-services%2Fopenai%2Fcontext%2Fcontext&tabs=portal#use-private-endpoints) can be used for Azure AI services resources to allow clients on a virtual network to securely access data over Azure Private Link.
-- Azure Computer Vision
-- Azure Database for PostgreSQL flexible server
 
 ## Prerequisites
 
@@ -33,7 +37,3 @@ For IAC scripts to deploy Azure resources, please check this repository - [Virtu
 
 - [postgresql_ingestion.ipynb](./postgresql_ingestion.ipynb)
 - [postgresql_vector_query.ipynb](./postgresql_vector_query.ipynb)
-
-## Reference
-
-- [pgvector github repository](https://github.com/pgvector/pgvector)
