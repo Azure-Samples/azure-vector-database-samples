@@ -12,12 +12,41 @@ The samples focus on -
 ***What this repository is not*** - This repository doesn't offer any guidance on how to build LLM apps (for example RAG pattern). Please check the following repositories for LLM app development guidance.
 
 - [End-to-End Retrieval Augmented Generation (RAG) Pattern with OpenAI](https://github.com/microsoft/rag-openai)
+- [RAG Experiment Accelerator](https://github.com/microsoft/rag-experiment-accelerator)
+
+## Code Structure
+
+The samples are consistent across different vector database technologies to ensure they are easy to follow and facilitate the comparison of different options.
+
+The *common* folder has sample code to generate embeddings. These embeddings are later used in the tech specfic samples for ingestion and vector search.
+
+- generate_embeddings.ipynb
+    - create text embeddings
+    - create document embeddings (including chunking)
+    - create image embeddings
+
+Each technology ample follows the following structure.
+
+- *technology_name*.bicep
+- *[technology_name]*_ingestion.ipynb
+    - create table/index with vector field
+    - implement index
+    - ingestion of text, document and image embeddings
+    - incremental ingestion
+- *[technology_name]*_vector_query.ipynb
+    - Simple vector search
+    - Metadata filtering with vector search 
+    - Cross column vector search
+    - Hybrid search 
+    - Document search 
+    - Image search 
+    - Recall measurement
 
 ## Code Samples
 
 - [Azure Cognitive Search](./azure_cognitive_search/README.md)
-- [Azure Redis Cache](./azure_redis_cache/README.md)
 - [Azure PostgreSQL](azure_postgresql/README.md)
+- [Azure Redis Cache](./azure_redis_cache/README.md)
 
 ## Run the Code Locally
 
