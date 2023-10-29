@@ -18,29 +18,24 @@ The samples focus on -
 
 The samples are consistent across different vector database technologies to ensure they are easy to follow and facilitate the comparison of different options.
 
-The *common* folder has sample code to generate embeddings. These embeddings are later used in the tech specfic samples for ingestion and vector search.
+The *common* folder has sample code to generate embeddings. These embeddings are later used in the technology specific samples for ingestion and vector search.
 
 - generate_embeddings.ipynb
-    - create text embeddings
-    - create document embeddings (including chunking)
-    - create image embeddings
 
-Each technology ample follows the following structure.
+  Notebook to generate embeddings from simple text, documents and images
+
+Each technology specific sample follows the following structure.
 
 - *technology_name*.bicep
+
+  Sample bicep script to spin up the particular vector database in Azure.
 - *[technology_name]*_ingestion.ipynb
-    - create table/index with vector field
-    - implement index
-    - ingestion of text, document and image embeddings
-    - incremental ingestion
+
+  Notebook to create table with vector field, implement index (HNSW etc.) and ingest the embeddings.
+
 - *[technology_name]*_vector_query.ipynb
-    - Simple vector search
-    - Metadata filtering with vector search 
-    - Cross column vector search
-    - Hybrid search 
-    - Document search 
-    - Image search 
-    - Recall measurement
+
+  Notebook to demonstrate vector search examples, like simple vector search, including metadata filtering, Cross column vector search, hybrid search,recall measurement etc.
 
 ## Code Samples
 
@@ -53,4 +48,8 @@ Each technology ample follows the following structure.
 - To run the code locally, install the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) in Visual Studio Code. Please check [Jupyter Notebooks in VS Code
 ](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) to understand how to use this extension.
 
-- The samples uses conda to manage python dependencies. Please check [Python environments in VS Code](https://code.visualstudio.com/docs/python/environments) how to use conda with VS Code.
+- The samples uses conda to manage python dependencies. Each sample comes with a conda environment (yml) file. Use the following command to create the conda environment.
+
+    `conda env create -f environment.yml`
+
+  Please check [Python environments in VS Code](https://code.visualstudio.com/docs/python/environments) how to use conda with VS Code.
