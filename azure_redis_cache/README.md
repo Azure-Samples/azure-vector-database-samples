@@ -6,17 +6,13 @@ This folder includes the notebooks and infra code to demonstrate vector search c
 
 - Azure Cache for Redis
 
-  *Create resource*
+  For using Azure Cache for Redis as Vector DB, `RediSearch` module needs to be enabled - [Use Redis modules with Azure Cache for Redis](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-redis-modules). This option is currently available only for Redis Enterprise Versions.
 
-For IAC deployment, **[infrastructure folder](./infrastructure/)** folder has a bicep script to deploy the Azure Redis Cache.
+  Azure Cache for Redis can be deployed using the [Azure Portal](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/quickstart-create-redis) or [bicep/arm/terraform templates](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-redis-cache-bicep-provision). From network security perspective, you can use [private endpoint](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-private-link) to secure inbound and outbound connectivity.
 
-To deploy the infra resources, follow below steps-
+  For IAC deployment, **[infrastructure](./infrastructure/)** folder has a bicep script to deploy the Azure Cache for Redis. In the bicep script, fill out the parameters values in `params` section according to your environment, and run the following command.
 
-1) Navigate to **[infrastructure folder](./infrastructure/)**
-2) Fill out the parameters values in `params` section of bicep scripts according to your environment.
-3) To deploy, run the following command- `az deployment group create --resource-group resource_group_name --template-file azure_redis_cache.bicep`
-
- NOTE:  **For using Azure Cache for Redis as Vector DB, you need to enable the `Redis Search` module in Azure Redis config. This option is currently available only for Redis Enterprise Versions. You can enable this option while provisioning the Azure Redis under `Modules` option of `Advanced` section.**
+  `az deployment group create --resource-group resource_group_name --template-file azure_redis_cache.bicep`
 
 - Azure OpenAI
   
