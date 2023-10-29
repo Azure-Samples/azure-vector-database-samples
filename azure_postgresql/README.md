@@ -9,6 +9,10 @@ This folder includes the notebooks to demonstrate vector search capabilities for
   *Create resource*
 
     Vector search feature can only be used with Flexible Server. PostgreSQL Flexible Server can  be deployed from the Azure Portal.
+
+    For IAC deployment, **[infrastructure](./infrastructure/)** folder has a bicep script to deploy the PostgreSQL Flexible Server. In the bicep script, fill out the parameters values in `params` section according to your environment, and run the following command.
+
+   `az deployment group create --resource-group resource_group_name --template-file postgres.bicep`
   
   *Enable extension*
 
