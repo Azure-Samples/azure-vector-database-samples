@@ -1,4 +1,4 @@
-param name string = 'search2122'
+param name string = ''
 param location string = resourceGroup().location
 param tags object = {}
 param sku string = 'standard'
