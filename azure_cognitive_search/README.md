@@ -4,12 +4,13 @@ This folder includes the notebooks to demonstrate vector search capabilities for
 
 ## Resources Deployment
 
-For IAC scripts to deploy Azure resources, please check this repository - [Virtual Network Integration Recipes
-](https://github.com/Azure-Samples/virtual-network-integration-recipes)
-
 - Azure Cognitive Search
 
   Azure Cognitive Search can be deployed using the [Azure Portal](https://docs.microsoft.com/azure/search/search-create-service-portal) or [bicep/arm/terraform templates](https://learn.microsoft.com/azure/templates/Microsoft.Search/searchServices?pivots=deployment-language-bicep#identity). From network security perspective, you can use [private endpoint](https://learn.microsoft.com/azure/search/service-create-private-endpoint) and [shared private link](https://learn.microsoft.com/azure/search/search-indexer-howto-access-private?tabs=portal-create) to secure inbound and outbound connectivity.
+
+  For IAC deployment, **[infrastructure](./infrastructure/)** folder has a bicep script to deploy the Azure Cognitive Search Service. In the bicep script, fill out the parameters values in `params` section according to your environment, and run the following command.
+
+  `az deployment group create --resource-group resource_group_name --template-file cognitive_search.bicep`
 
 - Azure OpenAI
 
@@ -19,7 +20,12 @@ For IAC scripts to deploy Azure resources, please check this repository - [Virtu
 
 - Create a conda environment to include all necessary python dependencies.
   - For REST endpoint samples - [cognitive_search_rest_conda.yml](./rest_endpoint_sample/cognitive_search_rest_conda.yml)
+
+  `conda env create -f cognitive_search_rest_conda.yml`
+
   - For Python SDK samples - [cognitive_search_sdk_conda.yml](./python_sdk_sample/cognitive_search_sdk_conda.yml)
+  
+  `conda env create -f cognitive_search_sdk_conda.yml`
 - Create a *.env* file from the *.env-template* and populate it with all necessary keys.
 - Run the [common > generate_embeddings.ipynb](../common/generate_embeddings.ipynb) notebook to generate the embeddings from the source dataset before running the samples.
 
@@ -40,3 +46,8 @@ For IAC scripts to deploy Azure resources, please check this repository - [Virtu
 
 - [cognitive_search_sdk_ingestion.ipynb](./python_sdk_sample/cognitive_search_sdk_ingestion.ipynb)
 - [cognitive_search_sdk_query.ipynb](./python_sdk_sample/cognitive_search_sdk_query.ipynb)
+
+## Reference
+
+- [Create a vector query in Azure Cognitive Search](https://learn.microsoft.com/en-us/azure/search/vector-search-how-to-query)
+- [Vector search (public preview) - Azure Cognitive Search](https://github.com/Azure/cognitive-search-vector-pr)

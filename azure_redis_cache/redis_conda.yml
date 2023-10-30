@@ -1,0 +1,41 @@
+name: ~/azure-vector-database-samples/.env
+channels:
+  - defaults
+dependencies:
+  - bzip2=1.0.8=h620ffc9_4
+  - ca-certificates=2023.08.22=hca03da5_0
+  - libffi=3.4.4=hca03da5_0
+  - ncurses=6.4=h313beb8_0
+  - openssl=3.0.11=h1a28f6b_2
+  - pip=23.2.1=py311hca03da5_0
+  - python=3.11.5=hb885b13_0
+  - readline=8.2=h1a28f6b_0
+  - setuptools=68.0.0=py311hca03da5_0
+  - sqlite=3.41.2=h80987f9_0
+  - tk=8.6.12=hb8d0fd4_0
+  - wheel=0.41.2=py311hca03da5_0
+  - xz=5.4.2=h80987f9_0
+  - zlib=1.2.13=h5a0b063_0
+  - pip:
+      - aiohttp==3.8.6
+      - aiosignal==1.3.1
+      - async-timeout==4.0.3
+      - attrs==23.1.0
+      - certifi==2023.7.22
+      - charset-normalizer==3.3.0
+      - frozenlist==1.4.0
+      - idna==3.4
+      - multidict==6.0.4
+      - numpy==1.26.0
+      - openai==0.28.1
+      - pandas==2.1.1
+      - python-dateutil==2.8.2
+      - python-dotenv==1.0.0
+      - pytz==2023.3.post1
+      - redis==5.0.1
+      - requests==2.31.0
+      - six==1.16.0
+      - tqdm==4.66.1
+      - tzdata==2023.3
+      - urllib3==2.0.6
+      - yarl==1.9.2
