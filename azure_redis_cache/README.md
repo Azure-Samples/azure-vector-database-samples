@@ -6,10 +6,13 @@ This folder includes the notebooks to demonstrate vector search capabilities for
 
 - Azure Cache for Redis
 
-  Need to use Enterprise tier to enable RediSearch module.
-  
-  Need to include RediSearch module. Details - [Use Redis modules with Azure Cache for Redis
-](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-redis-modules)
+  For using Azure Cache for Redis as Vector DB, `RediSearch` module needs to be enabled - [Use Redis modules with Azure Cache for Redis](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-redis-modules). This option is currently available only for Redis Enterprise Versions.
+
+  Azure Cache for Redis can be deployed using the [Azure Portal](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/quickstart-create-redis) or [bicep/arm/terraform templates](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-redis-cache-bicep-provision). From network security perspective, you can use [private endpoint](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-private-link) to secure inbound and outbound connectivity.
+
+  For IAC deployment, **[infrastructure](./infrastructure/)** folder has a bicep script to deploy the Azure Cache for Redis. In the bicep script, fill out the parameters values in `params` section according to your environment, and run the following command.
+
+  `az deployment group create --resource-group resource_group_name --template-file azure_redis_cache.bicep`
 
 - Azure OpenAI
   
@@ -33,4 +36,3 @@ This folder includes the notebooks to demonstrate vector search capabilities for
 
 - [redis_ingestion.ipynb](./redis_ingestion.ipynb)
 - [redis_vector_query.ipynb](./redis_vector_query.ipynb)
-  
