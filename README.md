@@ -14,6 +14,12 @@ The samples focus on -
 - [End-to-End Retrieval Augmented Generation (RAG) Pattern with OpenAI](https://github.com/microsoft/rag-openai)
 - [RAG Experiment Accelerator](https://github.com/microsoft/rag-experiment-accelerator)
 
+## Code Samples
+
+- [Azure Cognitive Search](./azure_cognitive_search/README.md)
+- [Azure PostgreSQL](azure_postgresql/README.md)
+- [Azure Redis Cache](./azure_redis_cache/README.md)
+
 ## Code Structure
 
 The samples are consistent across different vector database technologies to ensure they are easy to follow and facilitate the comparison of different options.
@@ -36,12 +42,6 @@ Each technology specific sample follows the following structure.
 - *[technology_name]*_vector_query.ipynb
 
   Notebook to demonstrate vector search examples, like simple vector search, including metadata filtering, Cross column vector search, hybrid search,recall measurement etc.
-
-## Code Samples
-
-- [Azure Cognitive Search](./azure_cognitive_search/README.md)
-- [Azure PostgreSQL](azure_postgresql/README.md)
-- [Azure Redis Cache](./azure_redis_cache/README.md)
 
 ## Run the Code Locally
 
