@@ -6,7 +6,7 @@ The samples focus on -
 
 - Working with text, documents and images
 - Ingesting embeddings and constructing complex queries
-- IAC scripts to spin up vector storage in Azure
+- IaC scripts to spin up vector storage in Azure
 - Common scaling and troubleshooting challenges
 
 ***What this repository is not*** - This repository doesn't offer any guidance on how to build LLM apps (for example RAG pattern). Please check the following repositories for LLM app development guidance.
@@ -17,8 +17,8 @@ The samples focus on -
 ## Code Samples
 
 - [Azure Cognitive Search](./azure_cognitive_search/README.md)
-- [Azure PostgreSQL](azure_postgresql/README.md)
-- [Azure Redis Cache](./azure_redis_cache/README.md)
+- [Azure Database for PostgreSQL](azure_postgresql/README.md)
+- [Azure Cache for Redis](./azure_redis_cache/README.md)
 
 ## Code Structure
 

@@ -1,6 +1,6 @@
-# Azure PostgreSQL Samples
+# Azure Database for PostgreSQL Samples
 
-This folder includes the notebooks to demonstrate vector search capabilities for text, documents and images using PostgreSQL.
+This folder includes the notebooks to demonstrate vector search capabilities for text, documents and images using Azure Database for PostgreSQL.
 
 ## Resources Deployment
 
