@@ -26,14 +26,14 @@
             "type": "Collection(Edm.Single)",
             "searchable": true,
             "dimensions": 1536,
-            "vectorSearchConfiguration": "vector_config"
+            "vectorSearchProfile": "hnswProfile"
         },
         {
             "name": "content_vector",
             "type": "Collection(Edm.Single)",
             "searchable": true,
             "dimensions": 1536,
-            "vectorSearchConfiguration": "vector_config"
+            "vectorSearchProfile": "hnswProfile"
         }
     ],
     "corsOptions": {
@@ -52,17 +52,21 @@
         }
     ],
     "vectorSearch": {
-        "algorithmConfigurations": [
-            {
-                "name": "vector_config",
-                "kind": "hnsw",
-                "hnswParameters": {
-                    "m": 4,
-                    "efConstruction": 400,
-                    "efSearch": 500,
-                    "metric": "cosine"
-                }
+        "profiles": [
+          {
+            "name": "hnswProfile",
+            "algorithm": "myHnsw"
+          }
+        ],
+        "algorithms": [
+          {
+            "name": "myHnsw",
+            "kind": "hnsw",
+            "hnswParameters": {
+              "m": 4,
+              "metric": "cosine"
             }
+          }
         ]
     }
 }

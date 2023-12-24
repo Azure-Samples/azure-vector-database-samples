@@ -52,15 +52,16 @@ The code requires two Azure services - Azure AI Search and Azure OpenAI.
 
 ### Using REST Endpoint
 
-- [cognitive_search_rest_ingestion.ipynb](./rest_endpoint_sample/cognitive_search_rest_ingestion.ipynb)
-- [cognitive_search_rest_query.ipynb](./rest_endpoint_sample/cognitive_search_rest_query.ipynb)
+- [ai_search_rest_data_pipeline.ipynb](./rest_endpoint_sample/ai_search_rest_data_pipeline.ipynb)
+- [ai_search_rest_query.ipynb](./rest_endpoint_sample/ai_search_rest_query.ipynb)
 
 ### Using Python SDK
 
-- [cognitive_search_sdk_data_pipeline.ipynb](./python_sdk_sample/cognitive_search_sdk_data_pipeline.ipynb)
-- [cognitive_search_sdk_query.ipynb](./python_sdk_sample/cognitive_search_sdk_query.ipynb)
+- [ai_search_sdk_data_pipeline.ipynb](./python_sdk_sample/ai_search_sdk_data_pipeline.ipynb)
+- [ai_search_sdk_query.ipynb](./python_sdk_sample/ai_search_sdk_query.ipynb)
 
 ## Reference
 
 - [Create a vector query in Azure Cognitive Search](https://learn.microsoft.com/en-us/azure/search/vector-search-how-to-query)
+- [Azure AI Search REST API reference](https://learn.microsoft.com/en-us/rest/api/searchservice/?view=rest-searchservice-2023-11-01)
 - [Vector search samples - Azure AI Search](https://github.com/Azure/azure-search-vector-samples)
