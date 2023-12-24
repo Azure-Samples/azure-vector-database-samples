@@ -26,6 +26,15 @@ This folder includes the notebooks to demonstrate vector search capabilities for
   - For Python SDK samples - [cognitive_search_sdk_conda.yml](./python_sdk_sample/cognitive_search_sdk_conda.yml)
   
   `conda env create -f cognitive_search_sdk_conda.yml`
+
+  The packages in this conda environment are 
+
+    - python-dotenv
+    - azure_search_documents-11.4.0b12-py3-none-any.whl (the )
+    - pandas
+    - openai
+    - matplotlib
+    
 - Create a *.env* file from the *.env-template* and populate it with all necessary keys.
 - Run the [common > generate_embeddings.ipynb](../common/generate_embeddings.ipynb) notebook to generate the embeddings from the source dataset before running the samples.
 
@@ -44,7 +53,7 @@ This folder includes the notebooks to demonstrate vector search capabilities for
 
 ### Using Python SDK
 
-- [cognitive_search_sdk_ingestion.ipynb](./python_sdk_sample/cognitive_search_sdk_ingestion.ipynb)
+- [cognitive_search_sdk_data_pipeline.ipynb](./python_sdk_sample/cognitive_search_sdk_data_pipeline.ipynb)
 - [cognitive_search_sdk_query.ipynb](./python_sdk_sample/cognitive_search_sdk_query.ipynb)
 
 ## Reference
