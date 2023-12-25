@@ -16,7 +16,7 @@ The samples focus on -
 
 ## Code Samples
 
-- [Azure Cognitive Search](./azure_cognitive_search/README.md)
+- [Azure AI Search](./azure_ai_search/README.md)
 - [Azure Database for PostgreSQL](azure_postgresql/README.md)
 - [Azure Cache for Redis](./azure_redis_cache/README.md)
 

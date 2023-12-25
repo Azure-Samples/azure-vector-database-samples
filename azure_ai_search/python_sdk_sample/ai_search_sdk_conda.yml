@@ -1,4 +1,4 @@
-name: cognitive_search_sdk
+name: ai_search_sdk
 channels:
   - conda-forge
   - defaults
