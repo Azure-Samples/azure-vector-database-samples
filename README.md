@@ -20,8 +20,8 @@ The samples focus on -
   - [Azure AI Search](./azure_ai_search/README.md)
   - [Azure Database for PostgreSQL](azure_postgresql/README.md)
   - [Azure Cache for Redis](./azure_redis_cache/README.md)
-- Evaluation Sample
-- Best Practices
+- [Evaluation Sample](./evaluation/README.md)
+- [Best Practices](./best_practices/README.md)
 
 ## Code Sample
 
