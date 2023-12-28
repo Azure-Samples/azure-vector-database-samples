@@ -7,20 +7,23 @@ The samples focus on -
 - Working with text, documents and images
 - Ingesting embeddings and constructing complex queries
 - IaC scripts to spin up vector storage in Azure
-- Common scaling and troubleshooting challenges
+- Common best practices
 
 ***What this repository is not*** - This repository doesn't offer any guidance on how to build LLM apps (for example RAG pattern). Please check the following repositories for LLM app development guidance.
 
 - [End-to-End Retrieval Augmented Generation (RAG) Pattern with OpenAI](https://github.com/microsoft/rag-openai)
 - [RAG Experiment Accelerator](https://github.com/microsoft/rag-experiment-accelerator)
 
-## Code Samples
+## Repository Structure
 
-- [Azure AI Search](./azure_ai_search/README.md)
-- [Azure Database for PostgreSQL](azure_postgresql/README.md)
-- [Azure Cache for Redis](./azure_redis_cache/README.md)
+- [Code Samples](#code-sample)
+  - [Azure AI Search](./azure_ai_search/README.md)
+  - [Azure Database for PostgreSQL](azure_postgresql/README.md)
+  - [Azure Cache for Redis](./azure_redis_cache/README.md)
+- [Evaluation Sample](./evaluation/README.md)
+- [Best Practices](./best_practices/README.md)
 
-## Code Structure
+## Code Sample
 
 The samples are consistent across different vector database technologies to ensure they are easy to follow and facilitate the comparison of different options.
 
@@ -30,12 +33,12 @@ The *common* folder has sample code to generate embeddings. These embeddings are
 
   Notebook to generate embeddings from simple text, documents and images
 
-Each technology specific sample follows the following structure.
+Each technology specific sample folder follows the following structure.
 
-- *technology_name*.bicep
+- _infrastructure_ folder
 
   Sample bicep script to spin up the particular vector database in Azure.
-- *[technology_name]*_ingestion.ipynb
+- *[technology_name]*_data_pipeline.ipynb
 
   Notebook to create table with vector field, implement index (HNSW etc.) and ingest the embeddings.
 
