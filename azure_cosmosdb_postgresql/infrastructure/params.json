@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "administratorLoginPassword": {
+            "value": "Password123!"
+        },
+        "location": {
+            "value": "eastus"
+        },
+        "clusterName": {
+            "value": "postgresqlcluster"
+        },
+        "nodeCount": {
+            "value": 0   
+        },
+        "enableHa": {
+            "value": false
+        }
+    }
+}
