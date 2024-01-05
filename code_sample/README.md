@@ -29,10 +29,10 @@ This section provides product specific code samples on how to ingest and efficie
     - _infrastructure_ folder
 
     Sample bicep script to spin up the particular vector database in Azure.
-    - *[technology_name]*_data_pipeline.ipynb
+    - *[product_name]*_data_pipeline.ipynb
 
     Notebook to create table with vector field, implement index (HNSW etc.) and ingest the embeddings.
 
-    - *[technology_name]*_vector_query.ipynb
+    - *[product_name]*_vector_query.ipynb
 
     Notebook to demonstrate vector search examples, like simple vector search, including metadata filtering, Cross column vector search, hybrid search,recall measurement etc.
