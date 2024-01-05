@@ -64,6 +64,8 @@
             "kind": "hnsw",
             "hnswParameters": {
               "m": 4,
+              "efConstruction": 400,
+              "efSearch": 500,
               "metric": "cosine"
             }
           }
