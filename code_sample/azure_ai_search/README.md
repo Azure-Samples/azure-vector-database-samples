@@ -8,9 +8,9 @@ Follow the steps to run the code locally.
 
 1. The samples uses Conda to manage virtual environments. Create a conda environment using the provided yml file to include all necessary python dependencies.
 
-    - For REST endpoint samples - [cognitive_search_rest_conda.yml](./rest_endpoint_sample/cognitive_search_rest_conda.yml)
+    - For REST endpoint samples - [ai_search_rest_conda.yml](./rest_endpoint_sample/ai_search_rest_conda.yml)
 
-      `conda env create -f cognitive_search_rest_conda.yml`
+      `conda env create -f ai_search_rest_conda.yml`
 
     - For Python SDK samples - [ai_search_sdk_conda.yml](./python_sdk_sample/ai_search_sdk_conda.yml)
   
@@ -20,7 +20,7 @@ Follow the steps to run the code locally.
 
 2. Create a *.env* file from the *.env-template* and populate it with all necessary keys.
 
-3. Finally, follow the instructions mentioned here to run the code locally using VS Code - [Run the Code Locally](../README.md#run-the-code-locally)
+3. Finally, follow the instructions mentioned here to run the code locally using VS Code - [Run the Code Locally](../../README.md#run-the-code-locally)
 
 ## Resources Deployment
 

@@ -17,9 +17,10 @@ The samples focus on -
 ## Repository Structure
 
 - [Code Samples](#code-sample)
-  - [Azure AI Search](./azure_ai_search/README.md)
-  - [Azure Database for PostgreSQL](azure_postgresql/README.md)
-  - [Azure Cache for Redis](./azure_redis_cache/README.md)
+  - [Azure AI Search](./code_sample/azure_ai_search/README.md)
+  - [Azure Database for PostgreSQL](./code_sample/azure_postgresql/README.md)
+  - [Azure Cache for Redis](./code_sample/azure_redis_cache/README.md)
+  - [Azure CosmosDb for PostgreSQL](./code_sample/azure_cosmosdb_postgresql/README.md)
 - [Evaluation Sample](./evaluation/README.md)
 - [Best Practices](./best_practices/README.md)
 
