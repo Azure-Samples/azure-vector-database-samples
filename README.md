@@ -1,4 +1,4 @@
-# Vector Database Samples in Azure
+# Azure Vector Database Samples 
 
 As the need for customers to build copilots over their data grows, Vector Databases are becoming crucial in the architecture of production-grade copilot applications. This repository is a collection of samples that demonstrates how to use different vector database tools in Azure to store and query embeddings from text, documents and images.
 
@@ -16,11 +16,11 @@ The samples focus on -
 
 ## Repository Structure
 
-- [Code Samples](./code_sample/README.md)
-  - [Azure AI Search](./code_sample/azure_ai_search/README.md)
-  - [Azure Database for PostgreSQL](./code_sample/azure_postgresql/README.md)
-  - [Azure Cache for Redis](./code_sample/azure_redis_cache/README.md)
-  - [Azure CosmosDb for PostgreSQL](./code_sample/azure_cosmosdb_postgresql/README.md)
+- [Code Sampless](./code_samples/README.md)
+  - [Azure AI Search](./code_samples/azure_ai_search/README.md)
+  - [Azure Database for PostgreSQL](./code_samples/azure_postgresql/README.md)
+  - [Azure Cache for Redis](./code_samples/azure_redis_cache/README.md)
+  - [Azure CosmosDb for PostgreSQL](./code_samples/azure_cosmosdb_postgresql/README.md)
 - [Evaluation Sample](./evaluation/README.md)
 - [Best Practices](./best_practices/README.md)
 
