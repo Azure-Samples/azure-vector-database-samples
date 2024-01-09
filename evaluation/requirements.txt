@@ -1,3 +1,7 @@
 trectools
 evaluate
 openai
+unstructured==0.11.8
+pandas==2.1.4
+azure-search-documents==11.4.0b11
+python-dotenv==1.0.0
