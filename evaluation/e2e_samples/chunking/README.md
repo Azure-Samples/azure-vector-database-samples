@@ -6,7 +6,7 @@
 - [Overview](#overview)
 - [Dataset ](#dataset-)
 - [Evaluation Metrics ](#evaluation-metrics-)
-- [Notebook Setup ](#notebook-setup-)
+- [Notebook Setup](#notebook-setup)
   - [Setting up the .env File](#setting-up-the-env-file)
   - [Setting up the Requirements](#setting-up-the-requirements)
 
@@ -29,7 +29,7 @@ This end-to-end sample performs the following steps:
 What metrics did we use
 Why did we use the metrics
 
-## Notebook Setup <!-- Paul -->
+## Notebook Setup
 
 ### Setting up the .env File
 
