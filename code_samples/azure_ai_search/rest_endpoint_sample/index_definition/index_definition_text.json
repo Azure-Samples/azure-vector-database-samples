@@ -1,0 +1,74 @@
+{
+    "name": "text_sample",
+    "fields": [
+        {
+            "name": "id",
+            "type": "Edm.String",
+            "key": true
+        },
+        {
+            "name": "title",
+            "type": "Edm.String"
+        },
+        {
+            "name": "content",
+            "type": "Edm.String",
+            "searchable": true
+        },
+        {
+            "name": "category",
+            "type": "Edm.String",
+            "filterable": true,
+            "searchable": true
+        },
+        {
+            "name": "title_vector",
+            "type": "Collection(Edm.Single)",
+            "searchable": true,
+            "dimensions": 1536,
+            "vectorSearchProfile": "hnswProfile"
+        },
+        {
+            "name": "content_vector",
+            "type": "Collection(Edm.Single)",
+            "searchable": true,
+            "dimensions": 1536,
+            "vectorSearchProfile": "hnswProfile"
+        }
+    ],
+    "corsOptions": {
+        "allowedOrigins": ["*"],
+        "maxAgeInSeconds": 60
+    },
+    "scoringProfiles": [
+        {
+            "name": "scoring_profile_1",
+            "text": {
+                "weights": {
+                    "title": 10,
+                    "content": 2
+                }
+            }
+        }
+    ],
+    "vectorSearch": {
+        "profiles": [
+          {
+            "name": "hnswProfile",
+            "algorithm": "myHnsw"
+          }
+        ],
+        "algorithms": [
+          {
+            "name": "myHnsw",
+            "kind": "hnsw",
+            "hnswParameters": {
+              "m": 4,
+              "efConstruction": 400,
+              "efSearch": 500,
+              "metric": "cosine"
+            }
+          }
+        ]
+    }
+}
