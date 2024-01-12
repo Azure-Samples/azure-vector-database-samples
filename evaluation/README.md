@@ -6,7 +6,8 @@ Different samples of vector search evaluation.
 
 ## TREC Evaluation
 
-Uses [NIST TREC Tools](https://trec.nist.gov/) to evaluate vector search (in this case Postgres vector search, but the DB can be substituted for any variant).
+Uses [NIST TREC Tools](https://trec.nist.gov/) to evaluate vector search (in this case Postgres vector search, but the DB can be
+substituted for any variant).
 
 Requires:​
 
@@ -25,17 +26,21 @@ This example uses a very small, fake dataset meant to show working code. Suggest
 1. A groundtruth evaluation dataset relevant to the application's domain
 2. A large search dataset such as [MS Marco](https://microsoft.github.io/msmarco/)
 
-## E2E Samples
+## End-to-End Samples
 
-This section outlines different evaluation E2E samples.
+This section outlines different evaluation end-to-end samples.
 
 ### Chunking
 
-The chunking E2E sample outlines different evalution techniques used when evaluating search for chunked documents.
+The chunking end-to-end sample outlines different evalution techniques used when evaluating search for chunked documents.
 A few evaluation metrics used to evaluate searching for chunked documents include:
 
-- RougeL: (Recall-Oriented Understudy for Gisting Evaluation - Longest Common Subsequence) is a metric used in the field of Natural Language Processing for evaluating the quality of summaries by comparing them to reference summaries.
-- In-Top: Checks if the expected source is contained in any of the chunks. If the source is found in atleast 1 of the retrieved chunks, the in-top is 1. If the source is not found in the retrieved chunks, the in-top is 0.
+- RougeL: (Recall-Oriented Understudy for Gisting Evaluation - Longest Common Subsequence) is a metric used in the field
+of Natural Language Processing for evaluating the quality of summaries by comparing them to reference summaries.
+- In-Top: Checks if the expected source is contained in any of the chunks. If the source is found in atleast 1 of the retrieved
+chunks, the in-top is 1. If the source is not found in the retrieved chunks, the in-top is 0.
 
-This sample is a complete E2E solution that leverages [Azure AI Search](https://azure.microsoft.com/en-us/products/ai-services/ai-search/), [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service/?ef_id=_k_Cj0KCQiAnfmsBhDfARIsAM7MKi1FGNLVMVC_qzqNpEQcRJXIRcKX4X64hsMWIcsgyjkICSNfAIwGblUaAscNEALw_wcB_k_&OCID=AIDcmm5edswduu_SEM__k_Cj0KCQiAnfmsBhDfARIsAM7MKi1FGNLVMVC_qzqNpEQcRJXIRcKX4X64hsMWIcsgyjkICSNfAIwGblUaAscNEALw_wcB_k_&gad_source=1&gclid=Cj0KCQiAnfmsBhDfARIsAM7MKi1FGNLVMVC_qzqNpEQcRJXIRcKX4X64hsMWIcsgyjkICSNfAIwGblUaAscNEALw_wcB), and a sample QA dataset based on a very small subset of the [ISE playbook](https://github.com/microsoft/code-with-engineering-playbook).
-For more information on the sample please review the [project-level readme](./e2e_samples/chunking/README.md).
+This sample is a complete end-to-end solution that leverages [Azure AI Search](https://azure.microsoft.com/en-us/products/ai-services/ai-search/),
+[Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service/?ef_id=_k_Cj0KCQiAnfmsBhDfARIsAM7MKi1FGNLVMVC_qzqNpEQcRJXIRcKX4X64hsMWIcsgyjkICSNfAIwGblUaAscNEALw_wcB_k_&OCID=AIDcmm5edswduu_SEM__k_Cj0KCQiAnfmsBhDfARIsAM7MKi1FGNLVMVC_qzqNpEQcRJXIRcKX4X64hsMWIcsgyjkICSNfAIwGblUaAscNEALw_wcB_k_&gad_source=1&gclid=Cj0KCQiAnfmsBhDfARIsAM7MKi1FGNLVMVC_qzqNpEQcRJXIRcKX4X64hsMWIcsgyjkICSNfAIwGblUaAscNEALw_wcB),
+and a sample QA dataset based on a very small subset of the [ISE playbook](https://github.com/microsoft/code-with-engineering-playbook).
+For more information on the sample please review the [project-level readme](./chunking_evaluation/README.md).

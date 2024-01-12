@@ -23,9 +23,9 @@ the notebook.
 This end-to-end sample performs the following steps:
 
 1. Clear and create a new index in Azure AI Search (index name=**evaluation-index**)
-1. Load the [pre-chunked markdown data](../../../code_samples/data/e2e_samples/chunking/embeddings.json) into the
+1. Load the [pre-chunked markdown data](../../code_samples/data/chunking_evaluation/embeddings.json) into the
 AI Search index.
-1. Perform a similarity search against the [QA dataset](../../../code_samples/data/e2e_samples/chunking/ground_truth/qa_dataset.csv)
+1. Perform a similarity search against the [QA dataset](../../code_samples/data/chunking_evaluation/ground_truth/qa_dataset.csv)
 to retrieve the top 3 chunks and persist the retrieved values.
 1. Evaluate the results of the searched chunks according to the evaluation metrics described in [the evaluation section](#evaluation-metrics).
 
@@ -33,7 +33,7 @@ to retrieve the top 3 chunks and persist the retrieved values.
 
 ### QA Ground Truth Dataset
 
-This compact [dataset](../../../code_samples/data/e2e_samples/chunking/ground_truth/qa_dataset.csv) is used to evaluate the
+This compact [dataset](../../code_samples/data/chunking_evaluation/ground_truth/qa_dataset.csv) is used to evaluate the
 expected answer with the retrieved values from a vector database. The schema of this database includes the following fields:
 
 - `id`: The id of the question.
@@ -45,11 +45,11 @@ This dataset helps in assessing the performance of a QA system by comparing its 
 
 ### Raw Articles Dataset
 
-We included a set of [raw articles](../../../code_samples/data/e2e_samples/chunking/raw/) for chunking ingestion into the
+We included a set of [raw articles](../../code_samples/data/chunking_evaluation/raw/) for chunking ingestion into the
 vector retrieval database.
 
-To simplify the process of chunking and embedding these documents, we have provided the [embeddings](../../../code_samples/data/e2e_samples/chunking/embeddings.json)
-using the `text-embedding-ada-002` from OpenAI. Otherwise, you can generate new embeddings using this [notebook](../../../code_samples/common/generate_embeddings.ipynb).
+To simplify the process of chunking and embedding these documents, we have provided the [embeddings](../../code_samples/data/chunking_evaluation/embeddings.json)
+using the `text-embedding-ada-002` from OpenAI. Otherwise, you can generate new embeddings using this [notebook](../../code_samples/common/generate_embeddings.ipynb).
 
 
 ## Evaluation Metrics
