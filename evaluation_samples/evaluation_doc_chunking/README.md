@@ -63,9 +63,8 @@ useful in tasks like text summarization where the goal is to generate a concise 
 information from a larger text.
 
 To calculate ROUGE-L, the length of the LCS between the candidate summary and the reference summary is divided by the
-length of the reference summary. This gives the recall score.
-
-Here is the [documentation](https://pypi.org/project/rouge-score/) of the rouge_score calculated in this notebook.
+length of the reference summary. This gives the recall score. Here is the rouge_score module [documentation](https://pypi.org/project/rouge-score/)
+used in this notebook.
 
 ### In-top
 
