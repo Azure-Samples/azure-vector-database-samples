@@ -69,5 +69,5 @@ venv.bak/
 
 
 # evaluation output files
-evaluation/**/output/*
-!evaluation/**/output/.gitkeep
+evaluation_samples/**/output/*
+!evaluation_samples/**/output/.gitkeep

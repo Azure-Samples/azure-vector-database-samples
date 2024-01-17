@@ -1,13 +1,23 @@
-# Evaluating Vector Databases
+# Evaluating Vector Databases <!-- omit in toc -->
+
+## Table of Contents <!-- omit in toc -->
+
+- [Goal](#goal)
+- [Samples](#samples)
+  - [TREC Evaluation](#trec-evaluation)
+  - [Document Chunking Evaluation](#document-chunking-evaluation)
 
 ## Goal
 
 Different samples of vector search evaluation.
 
-## TREC Evaluation
+## Samples
 
-Uses [NIST TREC Tools](https://trec.nist.gov/) to evaluate vector search (in this case Postgres vector search, but the DB can be
-substituted for any variant).
+### TREC Evaluation
+
+The [TREC evaluation sample](./evaluation_trec/trec-evaluation.ipynb)
+uses [NIST TREC Tools](https://trec.nist.gov/) to evaluate vector search
+(in this case Postgres vector search, but the DB can be substituted for any variant).
 
 Requires:​
 
@@ -26,13 +36,10 @@ This example uses a very small, fake dataset meant to show working code. Suggest
 1. A groundtruth evaluation dataset relevant to the application's domain
 2. A large search dataset such as [MS Marco](https://microsoft.github.io/msmarco/)
 
-## End-to-End Samples
+### Document Chunking Evaluation
 
-This section outlines different evaluation end-to-end samples.
-
-### Chunking
-
-The chunking end-to-end sample outlines different evalution techniques used when evaluating search for chunked documents.
+The [document chunking sample](./evaluation_doc_chunking/README.md)
+outlines different evalution techniques used when evaluating search for chunked documents.
 A few evaluation metrics used to evaluate searching for chunked documents include:
 
 - RougeL: (Recall-Oriented Understudy for Gisting Evaluation - Longest Common Subsequence) is a metric used in the field
