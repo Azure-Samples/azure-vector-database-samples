@@ -51,6 +51,8 @@ vector retrieval database.
 To simplify the process of chunking and embedding these documents, we have provided the [embeddings](../../code_samples/data/chunking_evaluation/embeddings.json)
 using the `text-embedding-ada-002` from OpenAI. Otherwise, you can generate new embeddings using this [notebook](../../code_samples/common/generate_embeddings.ipynb).
 
+These evaluation metrics are not dependent on a particular chunking strategy.
+
 ## Evaluation Metrics
 
 ### RougeL
