@@ -183,4 +183,6 @@ dependencies:
   - zeromq=4.3.4=h0e60522_1
   - zipp=3.17.0=pyhd8ed1ab_0
   - zstd=1.5.5=h12be248_0
+  - pip:
+      - unstructured==0.11.8
 prefix: C:\Users\raihanalam\Miniconda3\envs\common
