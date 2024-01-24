@@ -1,4 +1,4 @@
-# Cosmos Mongo vCore Samples
+# Azure Cosmos DB for MongoDB vCore Samples
 
 This folder includes the notebooks to demonstrate vector search capabilities of [Azure Cosmos DB for MongoDB vCore](https://learn.microsoft.com/en-us/azure/cosmos-db/mongodb/vcore/vector-search) for text, documents and images.
 
