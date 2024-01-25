@@ -11,8 +11,8 @@ The samples focus on -
 
 ***What this repository is not*** - This repository doesn't offer any guidance on how to build LLM apps (for example RAG pattern). Please check the following repositories for LLM app development guidance.
 
-- [End-to-End Retrieval Augmented Generation (RAG) Pattern with OpenAI](https://github.com/microsoft/rag-openai)
-- [RAG Experiment Accelerator](https://github.com/microsoft/rag-experiment-accelerator)
+- [LLMOps with Prompt flow (preview)](https://github.com/microsoft/llmops-promptflow-template)
+- [Chat with your data - Solution accelerator](https://github.com/Azure-Samples/chat-with-your-data-solution-accelerator)
 
 ## Repository Structure
 
@@ -21,7 +21,8 @@ The samples focus on -
   - [Azure Database for PostgreSQL](./code_samples/azure_postgresql/README.md)
   - [Azure Cache for Redis](./code_samples/azure_redis_cache/README.md)
   - [Azure CosmosDb for PostgreSQL](./code_samples/azure_cosmosdb_postgresql/README.md)
-- [Evaluation Sample](./evaluation/README.md)
+  - [Azure Cosmos DB for MongoDB vCore](./code_samples/azure_cosmosdb_mongo/README.md)
+- [Evaluation Samples](./evaluation_samples/README.md)
 - [Best Practices](./best_practices/README.md)
 
 ## Run the Code Locally
