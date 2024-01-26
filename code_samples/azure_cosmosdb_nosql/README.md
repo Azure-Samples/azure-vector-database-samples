@@ -6,7 +6,7 @@ This folder includes the notebooks to demonstrate vector search capabilities of 
 
 Follow the steps to run the code locally.
 
-1. The samples uses Conda to manage virtual environments. Create a conda environment using the [azure_cosmosdb_nosql_conda.yml](./azure_cosmosdb_postgresql_conda.yml) file to include all necessary python dependencies.
+1. The samples uses Conda to manage virtual environments. Create a conda environment using the [azure_cosmosdb_nosql_conda.yml](./azure_cosmosdb_nosql_conda.yml) file to include all necessary python dependencies.
 
       `conda env create -f azure_cosmosdb_nosql_conda.yml`
 
@@ -42,8 +42,8 @@ Follow the steps to run the code locally.
 
 ## Sample Notebooks
 
-- [cosmos_ingestion.ipynb](./cosmos_ingestion.ipynb)
-- [cosmos_ingestion.ipynb](./cosmos_ingestion.ipynb)
+- [azure_cosmos_ingestion.ipynb](./cosmos_ingestion.ipynb)
+- [azure_cosmos_vector_query.ipynb](./cosmosdb_vector_query.ipynb)
 
 ## Reference
 
