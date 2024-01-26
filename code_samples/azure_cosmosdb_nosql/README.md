@@ -22,7 +22,7 @@ Follow the steps to run the code locally.
 
     Augment the Azure Cosmos DB data with semantic and vector search capabilities of Azure AI Search.. 
 
-    For IAC deployment, **[infrastructure](./infrastructure/)** folder has a bicep script to deploy the Azure CosmosDb. In the bicep script, fill out the parameters values in `params` section according to your environment, and run the following command.
+    For IAC deployment, **[infrastructure](./infrastructure/)** folder has a bicep script to deploy the Azure CosmosDb. In the bicep script, fill out the parameters values according to your environment, and run the following command. It will deploy an empty Cosmos Db No SQL, containers will be created in the ingestion step.
 
    `az deployment group create --resource-group resource_group_name --template-file azure_cosmosdb_nosql.bicep`
   
