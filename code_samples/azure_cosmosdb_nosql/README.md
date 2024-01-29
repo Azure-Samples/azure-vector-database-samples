@@ -6,7 +6,7 @@ This folder includes the notebooks to demonstrate vector search capabilities of 
 
 Follow the steps to run the code locally.
 
-1. The samples uses Conda to manage virtual environments. Create a conda environment using the [azure_cosmosdb_nosql_conda.yml](./azure_cosmosdb_postgresql_conda.yml) file to include all necessary python dependencies.
+1. The samples uses Conda to manage virtual environments. Create a conda environment using the [azure_cosmosdb_nosql_conda.yml](./azure_cosmosdb_nosql_conda.yml) file to include all necessary python dependencies.
 
       `conda env create -f azure_cosmosdb_nosql_conda.yml`
 
@@ -22,7 +22,7 @@ Follow the steps to run the code locally.
 
     Augment the Azure Cosmos DB data with semantic and vector search capabilities of Azure AI Search.. 
 
-    For IAC deployment, **[infrastructure](./infrastructure/)** folder has a bicep script to deploy the Azure CosmosDb. In the bicep script, fill out the parameters values in `params` section according to your environment, and run the following command.
+    For IAC deployment, **[infrastructure](./infrastructure/)** folder has a bicep script to deploy the Azure CosmosDb. In the bicep script, fill out the parameters values according to your environment, and run the following command. It will deploy an empty Cosmos Db No SQL, containers will be created in the ingestion step.
 
    `az deployment group create --resource-group resource_group_name --template-file azure_cosmosdb_nosql.bicep`
   
@@ -42,8 +42,8 @@ Follow the steps to run the code locally.
 
 ## Sample Notebooks
 
-- [cosmos_ingestion.ipynb](./cosmos_ingestion.ipynb)
-- [cosmos_ingestion.ipynb](./cosmos_ingestion.ipynb)
+- [azure_cosmos_ingestion.ipynb](./cosmos_ingestion.ipynb)
+- [azure_cosmos_vector_query.ipynb](./cosmosdb_vector_query.ipynb)
 
 ## Reference
 
