@@ -1,0 +1,5 @@
+openai==0.28.1
+pandas==2.2.0
+pymongo==4.6.1
+python-dotenv==1.0.0
+ipykernel==6.29.0
