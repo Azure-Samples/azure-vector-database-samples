@@ -1,0 +1,59 @@
+id,question,answer,source
+0,"What is the purpose of the data exploration workshop?","1. Ensure the team can access the data and compute resources that are necessary for the ML feasibility study
+2. Ensure that the data provided is of quality and is relevant to the ML solution  
+3. Make sure that the project team has a good understanding of the data
+4. Make sure that the SMEs (Subject Matter Experts) needed are present for Data Exploration Workshop
+5. List people needed for the data exploration workshop",ml-data-exploration.md
+1,"What are some questions to consider before starting a data exploration workshop regarding data access?","* Is it on-prem or on Azure already?
+* If it is on-prem, can we move the needed data to Azure under the appropriate subscription? Who has permission to move the data?
+* Is the data access approved from a legal/compliance perspective?",ml-data-exploration.md
+2,"What are some questions to consider before starting a data exploration workshop regarding computation?","* Is a VPN needed for the project team to access these computation nodes (Virtual Machines, Databricks clusters, etc) from their work PCs/Macs?
+* Any restrictions on accessing the source data system from these computation nodes?
+* If we want to create some compute resources, who has permissions to do so?",ml-data-exploration.md
+3,"What are some questions to consider before starting a data exploration workshop regarding programming language?","* Is Python/PySpark a preferred language?
+* Is there any internal approval processes for the Python/PySpark libraries we want to use for this engagement?",ml-data-exploration.md
+4,"What are the key objectives of the data exploration workshops?","1. Understand and document the features, location, and availability of the data.
+2. What order of magnitude is the current data (e.g., GB, TB)? Is this all relevant?
+3. How does the organization decide when to collect additional data or purchase external data? Are there any examples of this?
+4. Understand the quality of the data. Is there already a data validation strategy in place?
+5. What data has been used so far to analyze recent data-driven projects? What has been found to be most useful? What was not useful? How was this judged?
+6. What additional internal data may provide insights useful for data-driven decision-making for proposed projects? What external data could be useful?
+7. What are the possible constraints or challenges in accessing or incorporating this data?
+8. How was the data collected? Are there any obvious biases due to how the data was collected?
+9. What changes to data collection, coding, integration, etc has occurred in the last 2 years that may impact the interpretation or availability of the collected data",ml-data-exploration.md
+5,"What are the goals of model experimentation?","- **Performance**: Find the best performing solution
+- **Operationalization**: Keep an eye towards production, making sure that operationalization is feasible
+- **Code quality** Maintain code and artifacts quality
+- **Reproducibility**: Keep research active by allowing experiment tracking and reproducibility
+- **Collaboration**: Foster the collaboration and joint work of multiple people on the team",ml-experimentation.md
+6,"What are the challenges faced during model experimentation?","- **Trial and error process**: Difficult to plan and estimate durations and capacity.
+- **Quick and dirty**: We want to fail fast and get a sense of what’s working efficiently.
+- **Collaboration**: How do we form a team-wide trial and error process and effective brainstorming.
+- **Code quality**: How do we maintain the quality of non-production code during research.
+- **Operationalization**: Switching between approaches might have a significant impact on operationalization (e.g. GPU/CPU, batch/online, parallel/sequential, runtime environments).",ml-experimentation.md
+7,"What are the benefits of using virtual environments in model experimentation?","- Productization
+- Collaboration
+- Reproducibility",ml-experimentation.md
+8,"What are the expected outcomes for setting up a folder structure and source control in model experimentation? ","- Defined folder structure for all users to use, pushed to the repo.
+- [.gitignore](https://git-scm.com/docs/gitignore) file determining which folders should be synced with `git` and which should be kept locally. For example, [this one](https://github.com/drivendata/cookiecutter-data-science/blob/master/%7B%7B%20cookiecutter.repo_name%20%7D%7D/.gitignore).
+- Determine how notebooks are stored and versioned (e.g. [strip output from Jupyter notebooks](https://github.com/kynan/nbstripout))",ml-experimentation.md
+9,"What are the benefits of using experiment tracking in model experimentation?","Experiment tracking tools allow data scientists and researchers to keep track of previous experiments for better understanding of the experimentation process and for the reproducibility of experiments or models.",ml-experimentation.md
+10,"How long can feasibility studies can last?","Feasibility studies can last between 4-16 weeks, depending on specific problem details, volume of data, state of the data etc. Starting with a 4-week milestone might be useful, during which it can be determined how much more time, if any, is required for completion.",ml-feasibility-study.md
+11,"Will a model perform different in production than during training?","Once deployed into production, the model might be performing much worse than expected. This poor performance could be a result of:
+
+The data to be scored in production is significantly different from the train and test datasets
+The feature engineering steps are different or inconsistent in production compared to the training process
+The performance measure is not consistent (for example your test set covers several months of data where the performance metric for production has been calculated for one month of data)",ml-model-checklist.md
+12,"What type of engagement can benefit from a feasibility study?","Every engagement can benefit from a feasibility study early in the project.",ml-feasibility-study.md
+13,"Should we concider ethical concerns?","Every ML project goes through the Responsible AI process to ensure that it upholds Microsoft's 6 Responsible AI principles.",ml-model-checklist.md
+14,"Who collaborates on feasibility studies?","Collaboration from individuals with diverse skill sets is desired at this stage, including data scientists, data engineers, software engineers, PMs, human experience researchers, and domain experts. It embraces the use of engineering fundamentals, with some flexibility. For example, not all experimentation requires full test coverage and code review. Experimentation is typically not part of a CI/CD pipeline. Artifacts may live in the main branch as a folder excluded from the CI/CD pipeline, or as a separate experimental branch, depending on customer/team preferences.",ml-feasibility-study.md
+15,"What results should model monitoring lead to?","Ability to identify changes in model performance
+Warnings when anomalies in model output are occurring
+Retraining decisions and adaptation strategy",ml-model-checklist.md
+16,"If the feasibility study results in enough evidence to support the hypothesis that this problem can be solved using ML, what should be done?",Provide recommendations and technical assets for moving to the operationalization phase,ml-feasibility-study.md
+17,"Can ground truth be obtained in forecasting problems?","Forecasting scenarios are an example of machine learning problems where the ground truth could be obtained in most cases even though a delay might occur. For example, for a model predicting the sales of ice cream in a local shop, the ground truth will be obtained as the sales are happening, but it might appear in the system at a later time than as the model prediction.",ml-model-checklist.md
+18,"If there is not enough evidence to support the hypothesis at the end of a feasibility study, what should be done?","We detail the gaps and challenges that prevented us from reaching a positive outcome
+We may scope down the project, if applicable
+We may look at re-scoping the problem taking into account the findings of the feasibility study
+We assess the possibility to collect more data or improve data quality",ml-feasibility-study.md
+19,"Can ground truth be obtained in recommender systems?","For recommender system, obtaining the ground truth is a complex problem in most cases as there is no way of identifying the ideal recommendation. For a retail website for example, click/not click, buy/not buy or other user interaction with recommendation can be used as ground truth proxies.",ml-model-checklist.md
