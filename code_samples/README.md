@@ -7,6 +7,7 @@ This section provides product specific code samples on how to ingest and efficie
 - [Azure Database for PostgreSQL](azure_postgresql/README.md)
 - [Azure Cache for Redis](./azure_redis_cache/README.md)
 - [Azure CosmosDb for PostgreSQL](./azure_cosmosdb_postgresql/README.md)
+- [Fabric Real-Time Analytics(Kusto)](./fabric_kusto/README.md)
 
 ## Folder Structure
 
