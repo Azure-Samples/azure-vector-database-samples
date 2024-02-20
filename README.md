@@ -16,7 +16,7 @@ The samples focus on -
 
 ## Repository Structure
 
-- [Code Sampless](./code_samples/README.md)
+- [Code Samples](./code_samples/README.md)
   - [Azure AI Search](./code_samples/azure_ai_search/README.md)
   - [Azure Database for PostgreSQL](./code_samples/azure_postgresql/README.md)
   - [Azure Cache for Redis](./code_samples/azure_redis_cache/README.md)
