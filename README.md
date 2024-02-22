@@ -22,6 +22,7 @@ The samples focus on -
   - [Azure Cache for Redis](./code_samples/azure_redis_cache/README.md)
   - [Azure CosmosDb for PostgreSQL](./code_samples/azure_cosmosdb_postgresql/README.md)
   - [Azure Cosmos DB for MongoDB vCore](./code_samples/azure_cosmosdb_mongo/README.md)
+  - [Fabric Real-Time Analytics(Kusto)](./code_samples/fabric_kusto/README.md)
 - [Evaluation Samples](./evaluation_samples/README.md)
 - [Best Practices](./best_practices/README.md)
 
