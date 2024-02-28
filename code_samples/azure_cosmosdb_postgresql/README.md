@@ -28,9 +28,22 @@ Follow the steps to run the code locally.
   
   *Enable extension*
 
-    Vector search in CosmosDb for PostgreSQL is supported via the [pgvector](https://github.com/pgvector/pgvector) extension. To add it to allowlist via Azure Portal, navigate to `Server Parameters`, under `azure.extensions` and select the `VECTOR` parameter. 
+    Vector search in CosmosDb for PostgreSQL is supported via the [pgvector](https://github.com/pgvector/pgvector) extension. And for the Azure Cosmos DB for PostgreSQL Cluster (PostgreSQL version 12 - 16) the pgvector extension is enabled by default.
     
-     Extension details - [how to use Azure CosmosDb PostgreSQL extensions](https://learn.microsoft.com/en-us/azure/cosmos-db/postgresql/reference-extensions). Check if it's correctly added by running `SHOW azure.extensions;`.
+     Extension details - [how to use Azure CosmosDb PostgreSQL extensions](https://learn.microsoft.com/en-us/azure/cosmos-db/postgresql/reference-extensions).
+
+    PostgreSQL extensions must be installed in your database before you can use them.
+
+     ```sql
+     -- list the standard PostgreSQL extensions that are supported on Azure Cosmos DB for PostgreSQL.
+     SELECT * FROM pg_available_extensions;
+
+     -- install vector extension
+     SELECT create_extension('vector');
+
+     -- To remove an extension installed this way, use drop_extension().
+     SELECT create_extension('vector');
+     ```
 
 - Azure OpenAI
   
