@@ -74,7 +74,7 @@ The cost of implementing and maintaining vector databases can vary based on data
 
 ### Vector Search Algorithms and Index:
 
-1. - **Exhaustive K-nearest neighbours (KNN) and Hierarchical Navigable Small World (HNSW)** are some of the most common .
+ - **Exhaustive K-nearest neighbours (KNN) and Hierarchical Navigable Small World (HNSW)** are some of the most common .
 
      **Exhaustive KNN** scans the entire vector space performing a brute-force search , while **HNSW** performs an approximate nearest neighbour search (**ANN**). The **Graph-based (HNSW)** indexing method that utilizes a hierarchical graph architecture to index the vectors. Also unlike algorithms like NSW, HNSW maintains a hierarchical structure of embeddings, leading to a higher memory footprint and offers various tuneable parameters, requiring careful adjustment to enhance performance effectively which can be challenge when implementing from scratch. 
 
@@ -100,15 +100,15 @@ The cost of implementing and maintaining vector databases can vary based on data
 
          
 
-   - **Navigable Small World (NSW)**: it is a graph-based approach crafted to identify approximate nearest neighbours within a dataset. In this algorithm, data points are depicted as nodes in a graph, with each node linked to a predetermined group of neighbouring nodes.
+- **Navigable Small World (NSW)**: it is a graph-based approach crafted to identify approximate nearest neighbours within a dataset. In this algorithm, data points are depicted as nodes in a graph, with each node linked to a predetermined group of neighbouring nodes.
 
-   - **Linear Search Algorithm (Flat Indexing)**: This method involves comparing the query vector with every vector stored in the database sequentially. 
+- **Linear Search Algorithm (Flat Indexing)**: This method involves comparing the query vector with every vector stored in the database sequentially. 
 
-   - **Cluster-based Algorithm (IVF)**: Inverted File is a clustering technique that uses k-means clustering to group vectors into clusters. When a query vector is provided, it calculates the distance between the query vector and the centroids of each cluster, then searches for nearest neighbors in the cluster closest to the query vector. This reduces query time significantly.
+- **Cluster-based Algorithm (IVF)**: Inverted File is a clustering technique that uses k-means clustering to group vectors into clusters. When a query vector is provided, it calculates the distance between the query vector and the centroids of each cluster, then searches for nearest neighbors in the cluster closest to the query vector. This reduces query time significantly.
 
-   - **Quantization (Scalar and Product Quantization)**: This technique reduces the memory footprint of large embeddings by reducing their precision.
+- **Quantization (Scalar and Product Quantization)**: This technique reduces the memory footprint of large embeddings by reducing their precision.
 
-   - **When use the different approaches**:
+- **When to use the different approaches**:
 
      - **KNN** : As KNN calculates the distances between all pairs of data points and finds the exact `k` nearest neighbours for a query point. it is suitable for scenarios prioritizing high recall, especially with small to medium datasets as  it's computationally intensive,.
 
@@ -118,7 +118,7 @@ The cost of implementing and maintaining vector databases can vary based on data
      - **Cluster-based Algorithm (IVF)**: suitable for datasets that exhibit high dimensionality, sparsity, or natural groupings.
      - **Quantization (Scalar and Product Quantization)**: are suitable for datasets with high dimensionality, large memory footprints, approximate search requirements, and a need for efficient storage.
 
-   - **Considerations for the decision**:
+- **Considerations for the decision**:
 
      - **Latency and Throughput**: The deployment needs to consider the required latency for serving queries and the expected throughput. These factors determine the scalability and responsiveness of the system.
 
