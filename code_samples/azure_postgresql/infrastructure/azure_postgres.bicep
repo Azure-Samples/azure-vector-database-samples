@@ -8,8 +8,9 @@ param psqlDatabaseName string = ''
 param version string = '15'
 param serverInstanceType string = 'Standard_B1ms'
 param serverEdition string = 'Burstable'
+param deployVNET bool = false
 
-module network 'vnet.bicep' = {
+module network 'vnet.bicep' = if (deployVNET) {
   name: 'vnet'
   params: {
     location: location
@@ -24,14 +25,6 @@ resource dbServer 'Microsoft.DBforPostgreSQL/flexibleServers@2021-06-01' = {
     name: serverInstanceType
     tier: serverEdition
   }
-  resource configurations 'configurations@2022-12-01' = {
-    name: 'azure.extensions'
-    properties: {
-      value: 'vector'
-      source: 'user-override'
-    } 
-  }
-
   properties: {
     createMode: 'Default'
     version: version
@@ -44,11 +37,20 @@ resource dbServer 'Microsoft.DBforPostgreSQL/flexibleServers@2021-06-01' = {
       backupRetentionDays: 7
       geoRedundantBackup: 'Disabled'
     }
-    network: {
+    network: (deployVNET) ? {
       delegatedSubnetResourceId: network.outputs.subnetPostgresId
       privateDnsZoneArmResourceId: network.outputs.privateDnsZoneArmResourceId
-    }
+    } : {}
   }
+}
+
+resource configurations 'Microsoft.DBforPostgreSQL/flexibleServers/configurations@2022-12-01' = {
+  name: 'azure.extensions'
+  parent: dbServer
+  properties: {
+    value: 'vector'
+    source: 'user-override'
+  } 
 }
 
 resource vectorDB 'Microsoft.DBforPostgreSQL/flexibleServers/databases@2022-12-01' = {
