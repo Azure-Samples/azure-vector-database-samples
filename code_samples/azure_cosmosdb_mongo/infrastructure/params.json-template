@@ -3,16 +3,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "clusterName": {
-            "value": "mongovectorsearch"
+            "value": "{CLUSTER-NAME}"
         },
         "location": {
-            "value": "eastus"
+            "value": "{REGION}"
         },
         "adminUsername": {
-            "value": "vectoradmin"   
+            "value": "{USERNAME}"   
         },
         "adminPassword": {
-            "value": "Password123!"
+            "value": "{PASSWORD}"
         }
     }
 }
