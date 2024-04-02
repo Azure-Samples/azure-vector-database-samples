@@ -17,6 +17,10 @@ model comes with a range of smaller embedding options
 paramaterising the amount of dimensions for an embedding
 vector affects the retrieval of information.
 
+Read also:
+
+- [Matryoshka embeddings: faster OpenAI vector search using Adaptive Retrieval](https://supabase.com/blog/matryoshka-embeddings)
+
 ## Binary Vectors
 
 From blog [My binary vector search is better than your FP32 vectors](https://blog.pgvecto.rs/my-binary-vector-search-is-better-than-your-fp32-vectors#heading-what-is-a-binary-vector),
