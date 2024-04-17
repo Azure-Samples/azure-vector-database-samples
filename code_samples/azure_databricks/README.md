@@ -1,25 +1,58 @@
-# Databricks instructions
-
-* go to `accounts.azuredatabricks.net/data`, then `Create metastore`
-
-
 # Vector Search in Azure Databricks
 
-This folder includes the notebooks to demonstrate [Azure Databricks Vector Search ](https://learn.microsoft.com/en-us/azure/databricks/generative-ai/create-query-vector-search) capabilities for text, documents and images using the REST API and Python SDK.
+Databricks Vector Search is a serverless similarity search engine, built into the Databricks Intelligence Platform.
 
-You can create and manage Vector Search components, like a vector search endpoint and vector search indices, using the UI, the Python SDK, or the REST API
+With Databricks Vector Search, you can create auto-updating vector search indexes, from Delta tables managed by Unity Catalog.
 
+Theses optimized indexes include both the embedded data and its metadata. They can be queried using REST API to identify most similar vectors and the associated documents.
+
+Databricks Vector Search uses the Hierarchical Navigable Small World (HNSW) algorithm for its approximate nearest neighbor searches and the L2 distance distance metric to measure embedding vector similarity.
+
+You can create and manage Vector Search components, like a vector search endpoint and vector search indices, using any of the following methods:
+
+- UI
+- Python SDK
+- REST APIs
+
+This folder includes the notebooks to demonstrate [Azure Databricks Vector Search](https://learn.microsoft.com/en-us/azure/databricks/generative-ai/create-query-vector-search) capabilities for text, documents and images using the REST API and Python SDK.
+
+## Requirements:
+
+- Unity Catalog enabled workspace.
+- Serverless compute enabled.
+- Source tables with Change Data Feed enabled.
+- Personal access tokens enabled.(Not Recommended for production workloads)
+- CREATE TABLE privileges on catalog schema(s) to create indexes.
+- Unity Catalog privileges for the Users querying the vector search endpoint(if not the owners of Vector Search Index):
+  1. USE CATALOG on the catalog that contains the vector search index.
+  2. USE SCHEMA on the schema that contains the vector search index.
+  3. SELECT on the vector search index.
 
 ## Run the Code locally 
 
-Follow the steps to to run the code locally and deploy a databricks environment in your azure portal.
+For IAC deployment, **[infrastructure](./infrastructure/)** folder has a bicep script to deploy the Databricks environment. In the bicep script, fill out the parameters values in `params` section according to your environment.
+
+1. Using the Azure CLI, login to your Azure account with the command `az login`.
+2. Choose the account using command `az account set --subscription "<subscription ID or name>"`
+3. Create a resource group 'az group create --name hema_test --location eastus'
+4. Deploy the Databricks environment `az deployment group create --resource-group resource_group_name --template-file databricks.bicep`
+
+az deployment group create --resource-group hema_test --template-file C:\github\azure-vector-database-samples-1\code_samples\azure_databricks\infrastructure\databricks.bicep
+
+code_samples\azure_databricks\infrastructure\databricks.bicep
 
 
 
+Y
+go to `accounts.azuredatabricks.net/data`, then `Create metastore`
 1. The samples uses 
 Deploy the Databricks Environment
 You would need Azure Global admin privelidge to create a Metastore in the databricks environment
 go to `accounts.azuredatabricks.net/data`, then `Create metastore`
+
+
+  
+
 
 
 ## Run the Code in azure Databricks Environment
