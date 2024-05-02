@@ -16,8 +16,6 @@ Follow the steps to run the code locally.
   
       `conda env create -f ai_search_sdk_conda.yml`
 
-      _azure-search-documents_ is installed from the wheel package ([azure_search_documents-11.4.0b12-py3-none-any.whl](./python_sdk_sample/whl/azure_search_documents-11.4.0b12-py3-none-any.whl)) directly to use the latest version of the library.
-
 2. Create a *.env* file from the *.env-template* and populate it with all necessary keys.
 
 3. Finally, follow the instructions mentioned here to run the code locally using VS Code - [Run the Code Locally](../../README.md#run-the-code-locally)
