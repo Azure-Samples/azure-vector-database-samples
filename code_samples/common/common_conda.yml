@@ -1,8 +1,8 @@
 name: common
 channels:
-  - microsoft
-  - defaults
+  - anaconda
   - conda-forge
+  - defaults
 dependencies:
   - python=3.10
   - ipykernel=6.25
@@ -13,4 +13,4 @@ dependencies:
   - langchain=0.1.16
   - markdown
   - pip:
-      - unstructured==0.11.8
+    - unstructured==0.11.8
