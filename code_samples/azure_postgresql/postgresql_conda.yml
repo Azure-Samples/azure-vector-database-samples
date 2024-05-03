@@ -1,39 +1,17 @@
 name: postgresql
 channels:
   - anaconda
-  - conda-forge
   - defaults
+  - conda-forge
 dependencies:
-  - huggingface_hub=0.20.3
-  - ipykernel=6.28.0
-  - ipython=8.20.0
-  - matplotlib-inline=0.1.6
-  - numpy=1.26.2
-  - openai=1.6.1
-  - pandas=2.1.4
-  - pillow=10.1.0
-  - pip=23.3.2
   - python=3.10
-  - python-dotenv=1.0.0
-  - pytorch=2.1.0
-  - re2=2023.06.02
-  - regex=2023.12.25
+  - python-dotenv
+  - ipykernel=6.25
+  - pandas
+  - openai=1.9
+  - matplotlib
+  - pillow
+  - psycopg2==2.9.9
   - requests=2.31.0
-  - scikit-learn=1.3.2
-  - scipy=1.11.4
   - sentence-transformers=2.2.2
-  - sentencepiece=0.1.99
-  - sentencepiece-python=0.1.99
-  - sentencepiece-spm=0.1.99
-  - tokenizers=0.15.0
-  - torchvision=0.15.2
-  - tornado=6.3.3
   - tqdm=4.66.1
-  - transformers=4.36.2
-  - pip:
-      - azure-common==1.1.28
-      - azure-core==1.29.4
-      - azure-search-documents==11.4.0
-      - isodate==0.6.1
-      - psycopg2==2.9.9
-      - pyarrow==15.0.2
