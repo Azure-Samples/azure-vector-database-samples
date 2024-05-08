@@ -1,0 +1,7 @@
+name: sea
+channels:
+  - anaconda
+dependencies:
+  - python=3.10
+  - pyyaml
+  - pandas

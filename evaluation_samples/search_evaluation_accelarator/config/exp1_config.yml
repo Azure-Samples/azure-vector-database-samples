@@ -1,0 +1,3 @@
+data_loader:
+  - module : ai_search
+  - eval_dataset : chunking_eval_dataset/qa_dataset.csv
