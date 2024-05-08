@@ -1,7 +1,10 @@
 from typing import Any
-from handler import Handler, AbstractHandler
+from evaluation import evaluation_step
+import os
+from dotenv import load_dotenv
 
-class embedding_loading_executor(AbstractHandler):
-    def handle(self, request: Any) -> str:
-        print(f"embedding_loading_executor {request}")
-        return super().handle(request)
+class aisearch_loader(evaluation_step):
+    def execute(self) -> str:
+        print("aisearch_loader")
+        print(self.config)
+        # super().handle_request(request)

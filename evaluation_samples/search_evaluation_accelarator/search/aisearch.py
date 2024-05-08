@@ -3,8 +3,8 @@ from evaluation import evaluation_step
 import os
 from dotenv import load_dotenv
 
-class openai_embedding(evaluation_step):
+class vector_search(evaluation_step):
     def execute(self) -> str:
-        print("openai_embedding")
+        print("vector_search")
         print(self.config)
         # super().handle_request(request)
