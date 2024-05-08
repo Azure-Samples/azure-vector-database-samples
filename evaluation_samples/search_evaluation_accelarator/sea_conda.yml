@@ -8,3 +8,8 @@ dependencies:
   - python-dotenv
   - openai=1.9
   - pandas
+  - langchain=0.1.16
+  - tqdm
+  - markdown
+  - pip:
+    - unstructured==0.11.8
