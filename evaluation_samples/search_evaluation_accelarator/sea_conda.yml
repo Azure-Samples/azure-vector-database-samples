@@ -1,6 +1,7 @@
 name: sea
 channels:
   - anaconda
+  - microsoft
 dependencies:
   - python=3.10
   - pyyaml
@@ -11,5 +12,7 @@ dependencies:
   - langchain=0.1.16
   - tqdm
   - markdown
+  - rouge-score==0.1.2
   - pip:
     - unstructured==0.11.8
+    - azure-search-documents

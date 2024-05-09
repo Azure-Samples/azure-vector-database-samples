@@ -2,3 +2,5 @@ embedding:
   - dataset_path : data\chunking_eval_dataset\qa_dataset.csv
   - embedding_dataset_path : evaluation_samples\search_evaluation_accelarator\data\chunking_dataset\embedding_dataset.json
   - pre_chunked_dataset_path : evaluation_samples\search_evaluation_accelarator\data\chunking_dataset\raw_docs
+data_load:
+  - index_name : chunk_eval
