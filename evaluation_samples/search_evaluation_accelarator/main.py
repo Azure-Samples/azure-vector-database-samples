@@ -9,7 +9,7 @@ if __name__ == "__main__":
     _config = config()
     eval_chain = evaluation_chain()
     eval_chain.add_evaluation_step(openai_embedding(_config))
-    # eval_chain.add_evaluation_step(aisearch_loader(_config))
+    eval_chain.add_evaluation_step(aisearch_loader(_config))
     # eval_chain.add_evaluation_step(vector_search(_config))
 
     eval_chain.execute()
