@@ -4,3 +4,6 @@ embedding:
   - pre_chunked_dataset_path : evaluation_samples\search_evaluation_accelarator\data\chunking_dataset\raw_docs
 data_load:
   - index_name : chunk_eval
+evaluation:
+  - eval_dataset : evaluation_samples\search_evaluation_accelarator\data\chunking_dataset\eval_qa_dataset.csv
+  - eval_output : evaluation_samples\search_evaluation_accelarator\data\chunking_dataset\output.csv

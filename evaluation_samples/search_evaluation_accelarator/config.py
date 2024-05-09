@@ -13,6 +13,8 @@ class config():
     ais_api_version: str
     ais_key: str
     index_name: str
+    eval_dataset: str
+    eval_output: str
 
     def read_config(self, config_file):
         config_file = os.path.join(os.getcwd(), 'evaluation_samples\search_evaluation_accelarator\config', config_file)
@@ -38,4 +40,6 @@ class config():
         self.embedding_dataset_path = exp_config['embedding'][1]['embedding_dataset_path']
         self.pre_chunked_dataset_path = exp_config['embedding'][2]['pre_chunked_dataset_path']
         self.index_name = exp_config['data_load'][0]['index_name']
+        self.eval_dataset = exp_config['evaluation'][0]['eval_dataset']
+        self.eval_output = exp_config['evaluation'][1]['eval_output']
 
