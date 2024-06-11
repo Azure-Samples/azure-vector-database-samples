@@ -5,7 +5,7 @@ class evaluation_chain:
     def __init__(self):
         self.steps = []
 
-    def add_evaluation_step(self, step):
+    def add_step(self, step):
         self.steps.append(step)
 
     def execute(self):
