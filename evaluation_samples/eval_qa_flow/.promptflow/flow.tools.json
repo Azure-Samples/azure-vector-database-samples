@@ -1,0 +1,143 @@
+{
+  "package": {},
+  "code": {
+    "metrics/calculate_recall_at_k.py": {
+      "type": "python",
+      "inputs": {
+        "retrieval_docs": {
+          "type": [
+            "object"
+          ]
+        },
+        "ground_truth_urls": {
+          "type": [
+            "string"
+          ]
+        },
+        "k": {
+          "type": [
+            "object"
+          ]
+        }
+      },
+      "description": "Compute the recall@k of the list of retrieved documents given a list\nground truth url(s).\n\nThis function compute the recall@k\n.. math::   ext{precision@k} = \frac{        ext{ # relevant documents in top k}}{# ground truth urls}\nrecall@K counts how many ground truth url(s) are retrieved in the top-k retrieved documents\n\nArgs:\n    retrieval_docs (list[dict]): the list of retrieved documents.\n    ground_truth_urls (str): the '|' separated string of ground truth urls.\n    k (list[int]): the k values for precision@k\n\nReturns:\n    dict: recall@k for each value of k",
+      "source": "metrics/calculate_recall_at_k.py",
+      "function": "calculate_recall_at_k"
+    },
+    "metrics/calculate_precision_at_k.py": {
+      "type": "python",
+      "inputs": {
+        "retrieval_docs": {
+          "type": [
+            "object"
+          ]
+        },
+        "ground_truth_urls": {
+          "type": [
+            "string"
+          ]
+        },
+        "k": {
+          "type": [
+            "object"
+          ]
+        }
+      },
+      "description": "Compute the precision@k of the list of retrieved documents given a list\nground truth url(s).\n\nThis function compute the precision@k\n.. math::   ext{precision@k} = \frac{        ext{number of relevant documents in top k}}{k}\nprecision@K counts how many ground truth url(s) are included in the retrieved k links.\n\nArgs:\n    retrieval_docs (list[dict]): the list of retrieved documents.\n    ground_truth_urls (str): the '|' separated string of ground truth urls.\n    k (list[int]): the k values for precision@k\n\nReturns:\n    dict: precision@k for each value of k",
+      "source": "metrics/calculate_precision_at_k.py",
+      "function": "calculate_precision_at_k"
+    },
+    "metrics/calculate_f1_at_k.py": {
+      "type": "python",
+      "inputs": {
+        "prec": {
+          "type": [
+            "object"
+          ]
+        },
+        "rec": {
+          "type": [
+            "object"
+          ]
+        }
+      },
+      "description": "Compute the f1-score@k of the list of retrieved documents given a list\nground truth url(s).\nThis function, given the precisiojn@k and the recall@k, compute the f1-score@k\n.. math:: f1score = 2       imes \frac{      ext{precision@k}        imes    ext{recall@k}}{ ext{precision@k} +      ext{recall@k}}\nf1-score is the harmonic mean of precision@k and recall@k\n\nArgs:\n    prec (dict): precision@k.\n    rec (dict): recall@k.\n\nReturns:\n    dict: F1 scores per K value",
+      "source": "metrics/calculate_f1_at_k.py",
+      "function": "calculate_f1_at_k"
+    },
+    "metrics/calculate_mrr.py": {
+      "type": "python",
+      "inputs": {
+        "retrieval_docs": {
+          "type": [
+            "object"
+          ]
+        },
+        "ground_truth_urls": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "description": "Compute the RR of the list of retrieved documents given a list ground truth url(s).\n\nThis function compute the Reciprocal Ranking (RR)\n.. math::   ext{mrr} = \frac{1}{     ext{Rank of the First Correctly Retrieved Document}}\nThe reciprocal rank of a query response is the multiplicative inverse of the rank of the first\ncorrect answer.\n\nArgs:\n    retrieval_docs (list[dict]): the list of retrieved documents.\n    ground_truth_urls (str): Ground truth urls. '|' separates multiple correct values.\n\nReturns:\n    float : Reciprocal Rank for each query",
+      "source": "metrics/calculate_mrr.py",
+      "function": "calculate_rr"
+    },
+    "metrics/calculate_hit_rate_at_k.py": {
+      "type": "python",
+      "inputs": {
+        "retrieval_docs": {
+          "type": [
+            "object"
+          ]
+        },
+        "ground_truth_urls": {
+          "type": [
+            "string"
+          ]
+        },
+        "k": {
+          "type": [
+            "object"
+          ]
+        }
+      },
+      "description": "Compute the hit rate based on ground truth. Hit Rate  = 1 if at least 1 document matches\nground truth URL in the topK retrieved documents else 0. This is a more lose evaluation for\nprecision as it ignores False Positives\n\nArgs:\n    retrieval_docs (list[dict]): the list of retrieved documents.\n    ground_truth_urls (str): the '|' separated string of ground truth urls.\n    k (list[int]): the k values for hit_rate@k\n\nReturns:\n    dict: hit_rate@k for each value of k",
+      "source": "metrics/calculate_hit_rate_at_k.py",
+      "function": "calculate_hit_rate_at_k"
+    },
+    "metrics/aggregate.py": {
+      "type": "python",
+      "inputs": {
+        "prec_res": {
+          "type": [
+            "object"
+          ]
+        },
+        "rec_res": {
+          "type": [
+            "object"
+          ]
+        },
+        "f1_res": {
+          "type": [
+            "object"
+          ]
+        },
+        "mrr_res": {
+          "type": [
+            "object"
+          ]
+        },
+        "hit_rate_res": {
+          "type": [
+            "object"
+          ]
+        }
+      },
+      "description": "This tool aggregates the precision@k, recall@k, f1-score@k, mrr and hit_rate_res@K,\nof all lines and calculate the average metric. The code logs the metrics for comparison\n\n:param prec_res,rec_res,f1_res: List of the output of the precision@k, recall@k,\nf1-score@k node, respectively.\n:param mrr: List of the output of mrr@k node",
+      "source": "metrics/aggregate.py",
+      "function": "aggregate"
+    }
+  }
+}

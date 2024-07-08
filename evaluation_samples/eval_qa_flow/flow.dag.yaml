@@ -1,0 +1,102 @@
+$schema: https://azuremlschemas.azureedge.net/promptflow/latest/Flow.schema.json
+environment:
+  python_requirements_txt: requirements.txt
+inputs:
+  ground_truth_urls:
+    type: string
+    default: enter ground truth url
+  retrieval_docs:
+    type: list
+    default:
+    - source: ""
+outputs:
+  recall:
+    type: string
+    reference: ${calculate_recall_at_k.output}
+  precision:
+    type: string
+    reference: ${calculate_precision_at_k.output}
+  f1:
+    type: string
+    reference: ${calculate_f1_at_k.output}
+  mrr:
+    type: string
+    reference: ${calculate_mrr.output}
+  hit_rate:
+    type: string
+    reference: ${calculate_hit_rate_at_k.output}
+nodes:
+- name: calculate_recall_at_k
+  type: python
+  source:
+    type: code
+    path: metrics/calculate_recall_at_k.py
+  inputs:
+    retrieval_docs: ${inputs.retrieval_docs}
+    ground_truth_urls: ${inputs.ground_truth_urls}
+    k:
+    - 1
+    - 3
+    - 4
+    - 5
+    - 10
+    - 50
+- name: calculate_precision_at_k
+  type: python
+  source:
+    type: code
+    path: metrics/calculate_precision_at_k.py
+  inputs:
+    retrieval_docs: ${inputs.retrieval_docs}
+    ground_truth_urls: ${inputs.ground_truth_urls}
+    k:
+    - 1
+    - 3
+    - 4
+    - 5
+    - 10
+    - 50
+- name: calculate_f1_at_k
+  type: python
+  source:
+    type: code
+    path: metrics/calculate_f1_at_k.py
+  inputs:
+    prec: ${calculate_precision_at_k.output}
+    rec: ${calculate_recall_at_k.output}
+- name: calculate_mrr
+  type: python
+  source:
+    type: code
+    path: metrics/calculate_mrr.py
+  inputs:
+    retrieval_docs: ${inputs.retrieval_docs}
+    ground_truth_urls: ${inputs.ground_truth_urls}
+  aggregation: false
+- name: calculate_hit_rate_at_k
+  type: python
+  source:
+    type: code
+    path: metrics/calculate_hit_rate_at_k.py
+  inputs:
+    retrieval_docs: ${inputs.retrieval_docs}
+    ground_truth_urls: ${inputs.ground_truth_urls}
+    k:
+    - 1
+    - 3
+    - 4
+    - 5
+    - 10
+    - 50
+- name: aggregate
+  type: python
+  source:
+    type: code
+    path: metrics/aggregate.py
+  inputs:
+    prec_res: ${calculate_precision_at_k.output}
+    rec_res: ${calculate_recall_at_k.output}
+    f1_res: ${calculate_f1_at_k.output}
+    mrr_res: ${calculate_mrr.output}
+    hit_rate_res: ${calculate_hit_rate_at_k.output}
+  aggregation: true
